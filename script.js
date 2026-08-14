@@ -301,7 +301,390 @@ function closeResearchers(){
 
 }
 
+/* =========================================================
+   FLOATING BUTTONS
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const backToTop = document.getElementById("backToTop");
+
+    const characterFab = document.getElementById("characterFab");
+
+    const characterModal =
+        document.getElementById("characterModal");
+
+    const closeCharacterModal =
+        document.getElementById("closeCharacterModal");
+
+    const createCharacter =
+        document.getElementById("createCharacter");
+
+    const characterName =
+        document.getElementById("characterName");
+
+    const characterType =
+        document.getElementById("characterType");
+
+    const characterEmoji =
+        document.getElementById("characterEmoji");
+
+    const characterAvatar =
+        document.getElementById("characterAvatar");
+
+    const characterPreviewName =
+        document.getElementById("characterPreviewName");
+
+    const characterResult =
+        document.getElementById("characterResult");
 
 
+    /* =====================================================
+       BACK TO TOP
+       ===================================================== */
+
+    function updateBackToTop() {
+
+        if (!backToTop) return;
+
+        const scrollPosition =
+            window.scrollY + window.innerHeight;
+
+        const pageHeight =
+            document.documentElement.scrollHeight;
+
+        /*
+           Show only when within 260px
+           of the bottom of the website.
+        */
+
+        const nearBottom =
+            pageHeight - scrollPosition <= 260;
+
+        backToTop.classList.toggle(
+            "is-visible",
+            nearBottom
+        );
+    }
 
 
+    window.addEventListener(
+        "scroll",
+        updateBackToTop,
+        { passive: true }
+    );
+
+    window.addEventListener(
+        "resize",
+        updateBackToTop
+    );
+
+    updateBackToTop();
+
+
+    /* Back to top click */
+
+    if (backToTop) {
+
+        backToTop.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       CHARACTER CREATOR
+       ===================================================== */
+
+
+    function openCharacterCreator() {
+
+        if (!characterModal) return;
+
+        characterModal.classList.add("is-open");
+
+        characterModal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        if (characterFab) {
+
+            characterFab.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+        }
+
+        setTimeout(function () {
+
+            if (characterName) {
+                characterName.focus();
+            }
+
+        }, 100);
+
+    }
+
+
+    function closeCharacterCreator() {
+
+        if (!characterModal) return;
+
+        characterModal.classList.remove("is-open");
+
+        characterModal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        if (characterFab) {
+
+            characterFab.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+
+    }
+
+
+    /* Open */
+
+    if (characterFab) {
+
+        characterFab.addEventListener(
+            "click",
+            openCharacterCreator
+        );
+
+    }
+
+
+    /* Close */
+
+    if (closeCharacterModal) {
+
+        closeCharacterModal.addEventListener(
+            "click",
+            closeCharacterCreator
+        );
+
+    }
+
+
+    /* Close by clicking outside */
+
+    if (characterModal) {
+
+        characterModal.addEventListener(
+            "click",
+            function (event) {
+
+                if (event.target === characterModal) {
+
+                    closeCharacterCreator();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* Close with ESC */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                characterModal &&
+                characterModal.classList.contains("is-open")
+            ) {
+
+                closeCharacterCreator();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       LIVE CHARACTER PREVIEW
+       ===================================================== */
+
+    function updateCharacterPreview() {
+
+        if (characterAvatar && characterEmoji) {
+
+            characterAvatar.textContent =
+                characterEmoji.value;
+
+        }
+
+
+        if (characterPreviewName) {
+
+            const name =
+                characterName.value.trim();
+
+            characterPreviewName.textContent =
+                name || "Your Character";
+
+        }
+
+    }
+
+
+    if (characterName) {
+
+        characterName.addEventListener(
+            "input",
+            updateCharacterPreview
+        );
+
+    }
+
+
+    if (characterEmoji) {
+
+        characterEmoji.addEventListener(
+            "change",
+            updateCharacterPreview
+        );
+
+    }
+
+
+    /* =====================================================
+       SAVE CHARACTER
+       ===================================================== */
+
+    function saveCharacter() {
+
+        const name =
+            characterName.value.trim() ||
+            "Player";
+
+        const type =
+            characterType.value;
+
+        const emoji =
+            characterEmoji.value;
+
+
+        const character = {
+
+            name: name,
+            type: type,
+            emoji: emoji
+
+        };
+
+
+        localStorage.setItem(
+            "cieSharpCharacter",
+            JSON.stringify(character)
+        );
+
+
+        characterResult.textContent =
+            name +
+            " is ready! Your " +
+            type +
+            " character has been created.";
+
+
+        updateCharacterPreview();
+
+    }
+
+
+    if (createCharacter) {
+
+        createCharacter.addEventListener(
+            "click",
+            saveCharacter
+        );
+
+    }
+
+
+    /* =====================================================
+       LOAD PREVIOUS CHARACTER
+       ===================================================== */
+
+    function loadCharacter() {
+
+        const savedCharacter =
+            localStorage.getItem(
+                "cieSharpCharacter"
+            );
+
+
+        if (!savedCharacter) return;
+
+
+        try {
+
+            const character =
+                JSON.parse(savedCharacter);
+
+
+            if (characterName) {
+
+                characterName.value =
+                    character.name || "";
+
+            }
+
+
+            if (characterType) {
+
+                characterType.value =
+                    character.type || "Code Ranger";
+
+            }
+
+
+            if (characterEmoji) {
+
+                characterEmoji.value =
+                    character.emoji || "🧙";
+
+            }
+
+
+            updateCharacterPreview();
+
+        }
+
+        catch (error) {
+
+            console.log(
+                "Could not load saved character."
+            );
+
+        }
+
+    }
+
+
+    loadCharacter();
+
+});

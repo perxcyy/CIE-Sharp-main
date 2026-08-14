@@ -1000,6 +1000,42 @@ footer p{
 
 
 /* =========================
+   FLOATING ACTION BUTTON
+========================= */
+
+.floating-action{
+    position:fixed;
+    margin:20px;
+    z-index:999;
+}
+
+.back-to-top{
+    bottom:30px;
+    right:30px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:15px 18px;
+    border-radius:50%;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.back-to-top:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+    box-shadow:0 6px 15px rgba(0,0,0,.2);
+}
+
+.character-fab{
+    bottom:30px;
+    right:100px;
+}
+
+
+/* =========================
    MOBILE RESEARCHER MODAL
 ========================= */
 
@@ -2144,4 +2180,394 @@ nav a,
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/* =========================================================
+   FLOATING ACTION BUTTONS
+   ========================================================= */
+
+.floating-actions {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+
+    z-index: 9999;
+
+    pointer-events: none;
+}
+
+
+/* General floating button */
+
+.floating-action {
+    width: 58px;
+    height: 58px;
+
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        box-shadow 0.2s ease;
+
+    pointer-events: auto;
+}
+
+
+/* Microgame character button */
+
+.character-fab {
+    background: #2563eb;
+    color: white;
+}
+
+.character-fab:hover {
+    transform: scale(1.08);
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+
+/* Back to top */
+
+.back-to-top {
+    background: #111827;
+    color: white;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+}
+
+
+/*
+   JavaScript adds this class when
+   the user reaches the bottom.
+*/
+
+.back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   CHARACTER CREATOR MODAL
+   ========================================================= */
+
+.character-modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 10000;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+/* Modal opened */
+
+.character-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Modal box */
+
+.character-modal-content {
+    position: relative;
+
+    width: min(480px, 100%);
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.30);
+
+    transform: translateY(20px) scale(0.96);
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.character-modal.is-open .character-modal-content {
+    transform: translateY(0) scale(1);
+}
+
+
+/* Close button */
+
+.character-modal-close {
+    position: absolute;
+
+    top: 12px;
+    right: 14px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f1f5f9;
+
+    font-size: 25px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.character-modal-close:hover {
+    background: #e2e8f0;
+}
+
+
+/* Modal heading */
+
+.character-modal-content h2 {
+    margin-top: 0;
+    padding-right: 35px;
+}
+
+
+.character-creator-subtitle {
+    color: #64748b;
+    margin-bottom: 22px;
+}
+
+
+/* Character preview */
+
+.character-preview {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.character-avatar {
+    width: 100px;
+    height: 100px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+
+    font-size: 55px;
+
+    box-shadow:
+        inset 0 0 0 4px #dbeafe;
+}
+
+
+.character-preview h3 {
+    margin: 0;
+}
+
+
+/* Form */
+
+.character-modal-content label {
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 6px;
+
+    font-weight: 600;
+}
+
+
+.character-modal-content input,
+.character-modal-content select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    background: white;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+.character-modal-content input:focus,
+.character-modal-content select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* Create button */
+
+.create-character-button {
+    width: 100%;
+
+    margin-top: 24px;
+
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.create-character-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* Result message */
+
+.character-result {
+    margin: 15px 0 0;
+
+    text-align: center;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .floating-actions {
+        right: 14px;
+        bottom: 14px;
+
+        gap: 9px;
+    }
+
+
+    .floating-action {
+        width: 52px;
+        height: 52px;
+
+        font-size: 22px;
+    }
+
+
+    .character-modal {
+        padding: 12px;
+    }
+
+
+    .character-modal-content {
+        padding: 24px 20px;
+
+        border-radius: 16px;
+
+        max-height: 92vh;
+    }
+
+
+    .character-avatar {
+        width: 85px;
+        height: 85px;
+
+        font-size: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .floating-actions {
+        right: 10px;
+        bottom: 10px;
+    }
+
+
+    .floating-action {
+        width: 48px;
+        height: 48px;
+
+        font-size: 20px;
+    }
+
+
+    .character-modal-content {
+        padding: 20px 16px;
+    }
+
 }
