@@ -1,0 +1,2147 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+    line-height:1.6;
+}
+
+
+/*HEADER */
+
+header{
+    background:#1e3a8a;
+    color:white;
+    padding:14px 50px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:75px;
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+}
+
+.logo h2{
+    font-size:25px;
+    margin:0;
+    line-height:1.1;
+    letter-spacing:.5px;
+}
+
+.logo span{
+    display:block;
+    font-size:12px;
+    color:#dbeafe;
+    margin-top:3px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:bold;
+    padding:9px 13px;
+    border-radius:6px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#2563eb;
+    color:white;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-btn{
+    color:white;
+    background:#2563eb;
+    text-decoration:none;
+    padding:9px 15px;
+    border-radius:6px;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#1d4ed8;
+    transform:translateX(-3px);
+}
+
+
+/* HERO */
+
+.hero{
+    background:white;
+    text-align:center;
+    padding:80px 20px;
+    animation:fadeIn .7s ease;
+}
+
+.hero h1{
+    color:#1e3a8a;
+    font-size:46px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:0 auto 30px;
+    font-size:18px;
+    color:#555;
+}
+
+
+/* =========================
+   MAIN BUTTON
+========================= */
+
+.btn{
+    display:inline-block;
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:13px 28px;
+    border-radius:7px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.section{
+    width:90%;
+    max-width:1100px;
+    margin:50px auto;
+    text-align:center;
+    animation:fadeIn .8s ease;
+}
+
+.section h2{
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+.section p{
+    color:#555;
+}
+
+
+/* CARDS */
+
+.card{
+    background:white;
+    padding:25px;
+    margin:15px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.card h2{
+    color:#1e3a8a;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#555;
+}
+
+
+/* =========================
+   LEARNING FEATURES
+========================= */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.feature-card{
+    background:white;
+    border:none;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+    cursor:pointer;
+    text-align:center;
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+.feature-card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.feature-card p{
+    color:#555;
+}
+
+
+/*TARGET USERS*/
+
+.target-users{
+    width:80%;
+    max-width:900px;
+    margin:50px auto;
+    padding:35px;
+    background:white;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.target-users h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+
+/* =========================
+   LESSON MODULES
+========================= */
+
+.modules{
+    width:90%;
+    max-width:1100px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.modules .card{
+    margin:0;
+}
+
+.modules .card h3{
+    font-size:16px;
+}
+
+.modules .card h2{
+    font-size:22px;
+}
+
+.modules button{
+    width:100%;
+    padding:11px;
+    border:none;
+    border-radius:6px;
+    background:#2563eb;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.modules button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.modules button:disabled{
+    background:#cbd5e1;
+    color:#64748b;
+    cursor:not-allowed;
+    transform:none;
+}
+
+
+/* PROGRESS */
+
+.progress{
+    width:80%;
+    max-width:900px;
+    margin:40px auto;
+    padding:30px;
+    background:white;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.progress h2{
+    color:#1e3a8a;
+    margin-bottom:18px;
+}
+
+progress{
+    width:100%;
+    height:22px;
+}
+
+.progress p{
+    margin-top:12px;
+    font-weight:bold;
+    color:#555;
+}
+
+
+/* =========================
+   LEARNING OBJECTIVE
+========================= */
+
+.objective{
+    width:80%;
+    max-width:900px;
+    margin:50px auto;
+    padding:35px;
+    background:white;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.objective h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.objective p{
+    color:#555;
+}
+
+
+/* LESSON CONTENT */
+
+.lesson-content{
+    width:85%;
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.lesson-content h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.lesson-content h3{
+    color:#2563eb;
+    margin-top:25px;
+    margin-bottom:10px;
+}
+
+.lesson-content p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+
+/* =========================
+   CODE EXAMPLE
+========================= */
+
+.code-box{
+    background:#1e293b;
+    color:#e2e8f0;
+    padding:20px;
+    border-radius:8px;
+    margin:20px 0;
+    overflow-x:auto;
+    font-family:Consolas, monospace;
+    line-height:1.6;
+}
+
+
+/* MICROGAME AREA */
+
+.game-area{
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+    padding:35px;
+    background:white;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.game-area h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.game-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.game-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+
+/*INFORMATION BOX */
+
+.info-box{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.45);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.info-content{
+    background:white;
+    width:90%;
+    max-width:600px;
+    padding:35px;
+    border-radius:10px;
+    position:relative;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    animation:popup .3s ease;
+}
+
+.info-content h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.info-content p{
+    color:#555;
+    line-height:1.7;
+}
+
+.close-btn{
+    position:absolute;
+    right:15px;
+    top:8px;
+    border:none;
+    background:none;
+    font-size:28px;
+    color:#555;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.close-btn:hover{
+    color:#1e3a8a;
+    transform:scale(1.1);
+}
+
+
+/* RESEARCHER BUTTON*/
+
+.developer-button{
+    width:300px;
+    margin:auto;
+    display:block;
+}
+
+
+/* RESEARCHER INFORMATION */
+
+.developer-intro{
+    margin-bottom:20px;
+}
+
+.researcher-list{
+    background:#f4f6f9;
+    padding:15px;
+    border-radius:8px;
+    margin:20px 0;
+}
+
+.researcher-list p{
+    color:#1e3a8a;
+    font-weight:bold;
+    margin:8px 0;
+}
+
+.developer-school{
+    text-align:center;
+    font-size:14px;
+    color:#666;
+    margin-top:20px;
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
+
+footer p{
+    font-size:14px;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes popup{
+
+    from{
+        opacity:0;
+        transform:scale(.95) translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    header{
+        padding:15px 30px;
+    }
+
+    .modules{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .logo{
+        justify-content:center;
+    }
+
+    .logo img{
+        width:60px;
+        height:60px;
+    }
+
+    .logo h2{
+        font-size:22px;
+    }
+
+    .logo span{
+        font-size:11px;
+    }
+
+    nav{
+        gap:5px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:14px;
+        padding:7px 10px;
+    }
+
+    .hero{
+        padding:60px 20px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        width:95%;
+        font-size:16px;
+    }
+
+    .modules{
+        grid-template-columns:1fr;
+    }
+
+    .progress,
+    .objective,
+    .target-users{
+        width:90%;
+    }
+
+    .lesson-content{
+        width:90%;
+        padding:25px;
+    }
+
+    .developer-button{
+        width:90%;
+        max-width:300px;
+    }
+
+    .info-content{
+        padding:30px 25px;
+    }
+
+}
+
+
+
+/* RESEARCHER INFORMATION BOX */
+
+#researcherBox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.45);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    z-index:1000;
+}
+
+
+/* NORMAL RESEARCHER MODAL */
+
+.researcher-content{
+    background:white;
+    width:90%;
+    max-width:720px;
+    height:560px;
+    padding:30px 40px 20px;
+    border-radius:14px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.20);
+    animation:fadeIn .3s ease;
+
+    display:flex;
+    flex-direction:column;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.researcher-title{
+    text-align:center;
+    color:#1e3a8a;
+    font-size:25px;
+    margin:0 30px 15px;
+    flex-shrink:0;
+}
+
+
+/* COUNTER*/
+
+.researcher-counter{
+    text-align:center;
+    margin-bottom:10px;
+    flex-shrink:0;
+}
+
+.researcher-counter span{
+    display:inline-block;
+    background:#1e3a8a;
+    color:white;
+    padding:5px 13px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+
+/* RESEARCHER PROFILE */
+
+.researcher-profile{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+
+    height:275px;
+    flex-shrink:0;
+}
+
+
+/* RESEARCHER IMAGE */
+
+.researcher-image{
+    width:185px;
+    height:215px;
+
+    flex-shrink:0;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    background:#f4f6f9;
+
+    border:3px solid #e2e8f0;
+}
+
+.researcher-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+
+/* =========================
+   RESEARCHER DETAILS
+========================= */
+
+.researcher-info{
+    flex:1;
+    max-width:390px;
+}
+
+.researcher-info h2{
+    color:#1e3a8a;
+    font-size:24px;
+    margin-bottom:5px;
+}
+
+.researcher-info h3{
+    color:#2563eb;
+    font-size:17px;
+    margin-bottom:14px;
+}
+
+.researcher-info p{
+    color:#555;
+    line-height:1.7;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.researcher-navigation{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    margin-top:10px;
+
+    flex-shrink:0;
+}
+
+.researcher-navigation button{
+    border:none;
+    background:#2563eb;
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:7px;
+
+    font-size:14px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.researcher-navigation button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.researcher-navigation button:disabled{
+    background:#cbd5e1;
+    color:#64748b;
+    cursor:not-allowed;
+    transform:none;
+}
+
+
+/* ONLY ONE 1 / 5 */
+
+#researcherNumberBottom{
+    color:#1e3a8a;
+    font-size:15px;
+    font-weight:bold;
+    text-align:center;
+}
+
+
+/* =========================
+   SCHOOL INFORMATION
+========================= */
+
+.researcher-school{
+    width:100%;
+
+    text-align:center;
+
+    border-top:1px solid #e2e8f0;
+
+    padding-top:12px;
+
+    margin-top:auto;
+
+    flex-shrink:0;
+}
+
+.researcher-school p{
+    color:#64748b;
+    font-size:13px;
+    line-height:1.5;
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.close-btn{
+    position:absolute;
+
+    right:15px;
+    top:8px;
+
+    width:35px;
+    height:35px;
+
+    border:none;
+    background:none;
+
+    font-size:30px;
+    line-height:30px;
+
+    color:#64748b;
+
+    cursor:pointer;
+
+    z-index:20;
+}
+
+.close-btn:hover{
+    color:#1e3a8a;
+}
+
+
+/* =========================
+   FINAL TEAM SUMMARY
+========================= */
+
+.research-team-summary{
+    display:none;
+
+    width:100%;
+    height:100%;
+
+    text-align:center;
+
+    padding:15px 10px 5px;
+
+    overflow-y:auto;
+}
+
+.research-team-summary h2{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.research-team-summary > p{
+    color:#555;
+    line-height:1.7;
+    max-width:580px;
+    margin:0 auto 20px;
+}
+
+
+/* =========================
+   TEAM LIST
+========================= */
+
+.researcher-list{
+    background:#f4f6f9;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin:20px auto;
+
+    max-width:500px;
+}
+
+.researcher-list p{
+    color:#1e3a8a;
+
+    font-weight:bold;
+
+    margin:8px 0;
+}
+
+
+/* =========================
+   FINAL CLOSE BUTTON
+========================= */
+
+.exit-researcher-btn{
+    display:block;
+
+    margin:20px auto 10px;
+
+    background:#1e3a8a;
+
+    color:white;
+
+    border:none;
+
+    padding:11px 28px;
+
+    border-radius:7px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.exit-researcher-btn:hover{
+    background:#172554;
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   MOBILE RESEARCHER MODAL
+========================= */
+
+@media(max-width:650px){
+
+    #researcherBox{
+        padding:15px;
+    }
+
+    .researcher-content{
+        width:95%;
+        height:620px;
+        padding:25px 20px 15px;
+    }
+
+    .researcher-title{
+        font-size:21px;
+        margin-bottom:12px;
+    }
+
+    .researcher-profile{
+        flex-direction:column;
+        gap:15px;
+        height:360px;
+    }
+
+    .researcher-image{
+        width:145px;
+        height:170px;
+    }
+
+    .researcher-info{
+        text-align:center;
+        max-width:100%;
+    }
+
+    .researcher-info h2{
+        font-size:20px;
+    }
+
+    .researcher-info h3{
+        font-size:15px;
+        margin-bottom:8px;
+    }
+
+    .researcher-info p{
+        font-size:14px;
+    }
+
+    .researcher-navigation button{
+        padding:9px 12px;
+        font-size:13px;
+    }
+
+    .researcher-school p{
+        font-size:11px;
+    }
+
+}
+
+/* FEATURE ICONS */
+
+.feature-icon{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 18px;
+}
+
+
+
+
+
+
+
+/* ================================
+   CURRICULUM MAP
+================================ */
+
+.curriculum-section {
+    width: 100%;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.curriculum-header {
+    background: #1c2d61;
+    color: white;
+    text-align: center;
+    padding: 55px 20px 50px;
+}
+
+.curriculum-header h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.curriculum-header p {
+    max-width: 500px;
+    margin: 12px auto 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #d9deee;
+}
+
+
+/* ================================
+   CONTENT CONTAINER
+================================ */
+
+.curriculum-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 55px 30px;
+}
+
+
+/* ================================
+   CURRICULUM ROW
+================================ */
+
+.curriculum-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+
+/* Reverse layout for second item */
+
+.curriculum-row.reverse {
+    flex-direction: row-reverse;
+}
+
+
+/* ================================
+   TEXT CONTENT
+================================ */
+
+.curriculum-content {
+    flex: 1;
+    max-width: 520px;
+}
+
+.level-badge {
+    display: inline-block;
+    background: #e7efff;
+    color: #5274bd;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.curriculum-content h2 {
+    margin: 0 0 10px;
+    color: #4b5d8c;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.curriculum-content p {
+    margin: 0 0 18px;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   TOPICS
+================================ */
+
+.topics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 25px;
+    margin-bottom: 18px;
+}
+
+.topics span {
+    color: #555;
+    font-size: 11px;
+}
+
+
+/* ================================
+   SYLLABUS LINK
+================================ */
+
+.syllabus-link {
+    color: #3d6ed8;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.syllabus-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   IMAGE
+================================ */
+
+.curriculum-image {
+    width: 45%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.curriculum-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+
+    .curriculum-header {
+        padding: 40px 20px;
+    }
+
+    .curriculum-header h1 {
+        font-size: 32px;
+    }
+
+    .curriculum-container {
+        padding: 40px 20px;
+    }
+
+    .curriculum-row,
+    .curriculum-row.reverse {
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+
+    .curriculum-content {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .curriculum-image {
+        width: 100%;
+        height: 220px;
+    }
+
+    .topics {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================================
+   SMALL MOBILE DEVICES
+================================ */
+
+@media (max-width: 480px) {
+
+    .curriculum-header h1 {
+        font-size: 27px;
+    }
+
+    .curriculum-header p {
+        font-size: 12px;
+    }
+
+    .curriculum-content h2 {
+        font-size: 22px;
+    }
+
+    .curriculum-image {
+        height: 180px;
+    }
+}
+
+/* --------------------
+   ABOUT STORY + IMAGE LAYOUT
+-------------------- */
+.two-column {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: 50px 20px;
+  gap: 30px; 
+}
+
+.two-column .story {
+  flex: 1;
+  min-width: 280px; 
+}
+
+.two-column .image {
+  flex: 1;
+  min-width: 280px;
+}
+
+.two-column img {
+  width: 100%;
+  border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+}
+
+/* --------------------
+   VALUES SECTION 
+-------------------- */
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 20px;
+  padding: 50px 20px;
+  background: #ffe4ec; 
+}
+
+.value-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1); 
+}
+
+.value-card h3 {
+  color: #d6336c; 
+  margin-bottom: 10px;
+}
+
+/* --------------------
+   RESPONSIVENESS
+-------------------- */
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column; 
+  }
+}
+
+/* --------------------
+   IMAGE BOX STYLING
+-------------------- */
+.image-box {
+  background: #fff0f5;
+  border: 2px solid #ffe4e9;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: auto; 
+}
+
+.image-box img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/*-- --------------------
+   CIE-SHARP BACKGROUND PAGE
+-------------------- */
+
+.ciepage,
+.ciepage * {
+    box-sizing: border-box;
+}
+
+.ciepage {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+    background-color: #d6d3f0;
+    color: #333;
+}
+
+
+/* HEADER */
+
+.ciepage .ciepage-header {
+    background: linear-gradient(
+        90deg,
+        #c2a8f9,
+        #4a3ce6,
+        #6077fa
+    );
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ciepage .ciepage-header-title {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.ciepage .ciepage-navigation {
+    margin-top: 8px;
+}
+
+.ciepage .ciepage-navigation-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.ciepage .ciepage-navigation-link:hover {
+    opacity: 0.8;
+}
+
+
+/* MAIN CONTAINER */
+
+.ciepage .ciepage-container {
+    max-width: 1000px;
+    margin: 30px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* SECTION HEADINGS */
+
+.ciepage .ciepage-section-title {
+    color: #3c33ea;
+    border-bottom: 2px solid #a8b1f9;
+    padding-bottom: 6px;
+    margin-bottom: 18px;
+    font-size: 1.4rem;
+}
+
+.ciepage .ciepage-subsection-title {
+    color: #2563eb;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+
+/* ARTICLES */
+
+.ciepage .ciepage-article {
+    margin-bottom: 30px;
+}
+
+.ciepage .ciepage-article p {
+    margin-bottom: 12px;
+}
+
+
+/* LISTS */
+
+.ciepage .ciepage-list {
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.ciepage .ciepage-numbered-list {
+    margin-left: 30px;
+    margin-bottom: 18px;
+}
+
+.ciepage .ciepage-list-item {
+    margin-bottom: 12px;
+}
+
+
+/* VIDEO EMBEDS */
+
+.ciepage .ciepage-video {
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.ciepage .ciepage-video:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* FOOTER */
+
+.ciepage .ciepage-footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+/* ANIMATION */
+
+@keyframes ciepageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ciepage .ciepage-fade-in {
+    animation: ciepageFadeIn 1s ease forwards;
+}
+
+
+/* HOVER EFFECT */
+
+.ciepage .ciepage-article-hover {
+    margin-bottom: 40px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .ciepage {
+        font-size: 0.95rem;
+    }
+
+    .ciepage .ciepage-header-title {
+        font-size: 1.6rem;
+    }
+
+    .ciepage .ciepage-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE / DEVICE-FRIENDLY OVERRIDES
+   CIE-Sharp
+   Works across phones, tablets, laptops, desktops and
+   narrow browser windows without horizontal scrolling.
+========================================================= */
+
+html {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    touch-action: manipulation;
+}
+
+/* ---------- GLOBAL CONTAINERS ---------- */
+
+.section,
+.modules,
+.progress,
+.objective,
+.target-users,
+.lesson-content,
+.game-area {
+    width: min(92%, 1100px);
+}
+
+.features {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+}
+
+.modules {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.card,
+.feature-card,
+.lesson-content,
+.game-area,
+.info-content,
+.researcher-content,
+.target-users,
+.progress,
+.objective {
+    min-width: 0;
+}
+
+.card,
+.feature-card {
+    overflow-wrap: anywhere;
+}
+
+.code-box {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: pre;
+}
+
+/* ---------- HEADER / NAVIGATION ---------- */
+
+header {
+    width: 100%;
+    gap: 14px 24px;
+    flex-wrap: wrap;
+    padding-inline: clamp(16px, 4vw, 50px);
+}
+
+.logo {
+    min-width: 0;
+}
+
+.logo h2 {
+    font-size: clamp(20px, 2.2vw, 25px);
+}
+
+nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav a,
+.back-btn {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-btn {
+    flex-shrink: 0;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    padding: clamp(44px, 8vw, 80px) clamp(16px, 4vw, 30px);
+}
+
+.hero h1 {
+    font-size: clamp(30px, 6vw, 46px);
+    line-height: 1.15;
+}
+
+.hero p {
+    width: min(100%, 750px);
+    font-size: clamp(15px, 2vw, 18px);
+}
+
+/* ---------- CONTENT ---------- */
+
+.section {
+    margin-block: clamp(32px, 6vw, 50px);
+}
+
+.two-column {
+    width: min(100%, 1100px);
+    margin-inline: auto;
+    padding: clamp(28px, 5vw, 50px) clamp(16px, 4vw, 20px);
+}
+
+.two-column .story,
+.two-column .image {
+    min-width: min(100%, 280px);
+}
+
+.values {
+    padding: clamp(30px, 5vw, 50px) clamp(16px, 4vw, 20px);
+}
+
+.target-users,
+.progress,
+.objective {
+    padding: clamp(22px, 5vw, 35px);
+}
+
+.lesson-content,
+.game-area {
+    padding: clamp(22px, 5vw, 40px);
+}
+
+/* ---------- MEDIA / EMBEDS ---------- */
+
+.ciepage .ciepage-video {
+    display: block;
+    width: min(100%, 560px);
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+}
+
+/* ---------- CURRICULUM ---------- */
+
+.curriculum-container {
+    width: min(100%, 1160px);
+    padding-inline: clamp(16px, 4vw, 30px);
+}
+
+.curriculum-row {
+    min-width: 0;
+}
+
+.curriculum-content {
+    min-width: 0;
+}
+
+.curriculum-image {
+    max-width: 100%;
+}
+
+.topics {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+}
+
+.curriculum-header h1 {
+    font-size: clamp(27px, 5vw, 42px);
+}
+
+/* ---------- BACKGROUND / INFORMATION PAGE ---------- */
+
+.ciepage .ciepage-container {
+    width: min(calc(100% - 32px), 1000px);
+    margin: clamp(16px, 4vw, 30px) auto;
+    padding: clamp(18px, 4vw, 25px);
+}
+
+.ciepage .ciepage-header {
+    padding-inline: clamp(16px, 4vw, 30px);
+}
+
+.ciepage .ciepage-header-title {
+    font-size: clamp(1.35rem, 5vw, 2rem);
+    line-height: 1.2;
+}
+
+.ciepage .ciepage-list {
+    margin-left: clamp(20px, 5vw, 50px);
+}
+
+.ciepage .ciepage-numbered-list {
+    margin-left: clamp(20px, 4vw, 30px);
+}
+
+/* ---------- MODALS ---------- */
+
+.info-box,
+#researcherBox {
+    padding: clamp(12px, 4vw, 24px);
+}
+
+.info-content {
+    width: min(100%, 600px);
+    max-height: min(90vh, 720px);
+    overflow-y: auto;
+    padding: clamp(22px, 5vw, 35px);
+}
+
+.researcher-content {
+    width: min(100%, 720px);
+    height: min(560px, 90vh);
+    max-height: 90vh;
+    padding: clamp(22px, 5vw, 40px);
+}
+
+.researcher-profile {
+    min-height: 0;
+}
+
+.researcher-info {
+    min-width: 0;
+}
+
+.researcher-info p {
+    overflow-wrap: anywhere;
+}
+
+.researcher-team-summary {
+    min-height: 0;
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+    header {
+        justify-content: center;
+    }
+
+    header .logo {
+        order: 1;
+    }
+
+    header .back-btn {
+        order: 0;
+    }
+
+    header nav {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .features,
+    .modules {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .curriculum-row,
+    .curriculum-row.reverse {
+        gap: clamp(24px, 5vw, 50px);
+    }
+}
+
+/* ---------- PHONE ---------- */
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        text-align: center;
+        padding-block: 12px 16px;
+        gap: 10px;
+    }
+
+    header .logo {
+        justify-content: center;
+    }
+
+    header .back-btn {
+        align-self: center;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    nav a {
+        flex: 0 1 auto;
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding-block: 42px;
+    }
+
+    .hero h1 {
+        margin-bottom: 14px;
+    }
+
+    .hero p {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .btn,
+    .game-btn {
+        max-width: 100%;
+        min-height: 44px;
+    }
+
+    .features,
+    .modules {
+        grid-template-columns: 1fr;
+        width: min(92%, 600px);
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+
+    .feature-icon {
+        width: 68px;
+        height: 68px;
+    }
+
+    .two-column {
+        flex-direction: column;
+    }
+
+    .two-column .story,
+    .two-column .image {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .image-box {
+        width: 100%;
+    }
+
+    .curriculum-row,
+    .curriculum-row.reverse {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .curriculum-content,
+    .curriculum-image {
+        width: 100%;
+        max-width: none;
+    }
+
+    .curriculum-image {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .topics {
+        grid-template-columns: 1fr;
+    }
+
+    .researcher-content {
+        width: 100%;
+        height: min(620px, 92vh);
+        padding: 22px 16px 14px;
+    }
+
+    .researcher-title {
+        font-size: 21px;
+        margin-inline: 28px;
+    }
+
+    .researcher-profile {
+        flex-direction: column;
+        height: auto;
+        flex: 1 1 auto;
+        overflow-y: auto;
+        padding-block: 8px;
+        gap: 14px;
+    }
+
+    .researcher-image {
+        width: 135px;
+        height: 160px;
+    }
+
+    .researcher-info {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .researcher-info h2 {
+        font-size: 20px;
+        line-height: 1.25;
+    }
+
+    .researcher-info h3 {
+        font-size: 15px;
+    }
+
+    .researcher-info p {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .researcher-navigation {
+        gap: 8px;
+    }
+
+    .researcher-navigation button {
+        min-height: 42px;
+        padding: 9px 12px;
+    }
+
+    .researcher-school {
+        margin-top: 10px;
+    }
+
+    .researcher-school p {
+        font-size: 11px;
+    }
+
+    .info-content {
+        max-height: 88vh;
+    }
+
+    footer {
+        padding: 18px 16px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .ciepage .ciepage-container {
+        width: calc(100% - 24px);
+        margin-block: 12px;
+    }
+
+    .ciepage .ciepage-section-title {
+        font-size: 1.2rem;
+    }
+
+    .ciepage .ciepage-subsection-title {
+        font-size: 1.05rem;
+    }
+
+    .ciepage .ciepage-list {
+        margin-left: 20px;
+    }
+
+    .ciepage .ciepage-numbered-list {
+        margin-left: 20px;
+    }
+}
+
+/* ---------- VERY SMALL PHONES ---------- */
+
+@media (max-width: 380px) {
+    nav a {
+        font-size: 12px;
+        padding: 7px 8px;
+    }
+
+    .logo h2 {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .card,
+    .feature-card {
+        padding: 16px;
+    }
+
+    .researcher-content {
+        padding-inline: 12px;
+    }
+
+    .researcher-navigation button {
+        font-size: 12px;
+        padding-inline: 9px;
+    }
+}
+
+/* ---------- LANDSCAPE PHONES ---------- */
+
+@media (max-height: 520px) and (orientation: landscape) {
+    .hero {
+        padding-block: 28px;
+    }
+
+    .researcher-content {
+        height: 94vh;
+    }
+
+    .researcher-profile {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .researcher-image {
+        width: 110px;
+        height: 130px;
+    }
+
+    .researcher-info {
+        text-align: left;
+    }
+}
+
+/* ---------- REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
