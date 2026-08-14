@@ -338,6 +338,20 @@
 </div>
 
 <!-- FLOATING ACTION BUTTONS -->
+<div class="floating-actions" aria-label="Quick actions">
+
+    <!-- Microgame Character Button -->
+    <button
+        id="characterFab"
+        class="floating-action character-fab"
+        type="button"
+        aria-label="Create a microgame character"
+        aria-controls="characterModal"
+        aria-expanded="false"
+        title="Create Microgame Character"
+    >
+        🎮
+    </button>
 
     <!-- Back to Top Button -->
     <button
@@ -349,6 +363,125 @@
     >
         ↑
     </button>
+
+</div>
+
+
+<!-- MICROGAME CHARACTER CREATOR -->
+<div
+    id="characterModal"
+    class="character-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="characterCreatorTitle"
+    aria-hidden="true"
+>
+
+    <div class="character-modal-content">
+
+        <button
+            id="closeCharacterModal"
+            class="character-modal-close"
+            type="button"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+        <h2 id="characterCreatorTitle">
+            Create Your Microgame Character
+        </h2>
+
+        <p class="character-creator-subtitle">
+            Create your character for the CIE-Sharp microgame experience.
+        </p>
+
+
+        <!-- Character Preview -->
+        <div class="character-preview">
+
+            <div id="characterAvatar" class="character-avatar">
+                🧙
+            </div>
+
+            <h3 id="characterPreviewName">
+                Your Character
+            </h3>
+
+        </div>
+
+
+        <!-- Name -->
+        <label for="characterName">
+            Character Name
+        </label>
+
+        <input
+            type="text"
+            id="characterName"
+            placeholder="Enter character name"
+            maxlength="20"
+        >
+
+
+        <!-- Character Type -->
+        <label for="characterType">
+            Character Type
+        </label>
+
+        <select id="characterType">
+
+            <option value="Code Ranger">
+                Code Ranger 🏹
+            </option>
+
+            <option value="Syntax Mage">
+                Syntax Mage 🧙
+            </option>
+
+            <option value="Bug Hunter">
+                Bug Hunter 🐞
+            </option>
+
+            <option value="Logic Knight">
+                Logic Knight ⚔️
+            </option>
+
+        </select>
+
+
+        <!-- Character Emoji -->
+        <label for="characterEmoji">
+            Character Avatar
+        </label>
+
+        <select id="characterEmoji">
+
+            <option value="🧙">🧙 Mage</option>
+            <option value="🏹">🏹 Ranger</option>
+            <option value="🐞">🐞 Bug Hunter</option>
+            <option value="⚔️">⚔️ Knight</option>
+            <option value="🤖">🤖 Robot</option>
+            <option value="👨‍💻">👨‍💻 Coder</option>
+
+        </select>
+
+
+        <button
+            id="createCharacter"
+            class="create-character-button"
+            type="button"
+        >
+            Create Character
+        </button>
+
+        <p
+            id="characterResult"
+            class="character-result"
+            aria-live="polite"
+        ></p>
+
+    </div>
 
 </div>
 
