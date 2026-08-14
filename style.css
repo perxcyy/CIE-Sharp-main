@@ -1205,14 +1205,14 @@ footer p{
 .curriculum-content h2 {
     margin: 0 0 10px;
     color: #4b5d8c;
-    font-size: 25px;
+    font-size: px;
     font-weight: 400;
 }
 
 .curriculum-content p {
     margin: 0 0 18px;
-    color: #666;
-    font-size: 13px;
+    color: #25336d;
+    font-size: 20px;
     line-height: 1.6;
 }
 
@@ -1229,8 +1229,8 @@ footer p{
 }
 
 .topics span {
-    color: #555;
-    font-size: 11px;
+    color: #4b6084;
+    font-size: 15px;
 }
 
 
@@ -1339,25 +1339,35 @@ footer p{
 -------------------- */
 .two-column {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: min(1100px, 90%);
+  margin: 0 auto;
   padding: 50px 20px;
-  gap: 30px; 
+}
+
+.two-column .story,
+.two-column .image-box {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .two-column .story {
-  flex: 1;
-  min-width: 280px; 
+  max-width: 560px;
 }
 
-.two-column .image {
-  flex: 1;
-  min-width: 280px;
+.two-column .image-box {
+  max-width: 480px;
+  width: 100%;
+  margin: 0;
 }
 
 .two-column img {
   width: 100%;
-  border-radius: 12px; 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* --------------------
@@ -1401,15 +1411,17 @@ footer p{
   border: 2px solid #ffe4e9;
   border-radius: 12px;
   padding: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 400px;
-  margin: auto; 
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .image-box img {
+  width: 100%;
   max-width: 100%;
   border-radius: 8px;
   display: block;
