@@ -9,40 +9,40 @@ function showInfo(feature){
 
     if(feature == "progressive"){
 
-        title.innerHTML = "Progressive Syntax Challenges";
+        title.innerHTML = "BEGIN YOUR SPELLCRAFT";
 
         text.innerHTML =
-        "CIE-Sharp provides progressive C# syntax challenges that begin with Beginner-level activities and gradually increase toward Basic, Intermediate, and Advanced levels. Activities are unlocked progressively to support gradual practice.";
+        "Build your foundation by learning variables, data types, operators, and basic C# syntax. Master these essential spells before advancing to more complex concepts.";
 
     }
 
 
     else if(feature == "guided"){
 
-        title.innerHTML = "Guided Problem-Solving";
+        title.innerHTML = "TURN LOGIC INTO CODE";
 
         text.innerHTML =
-        "CIE-Sharp guides learners through the Understand, Plan, Code, and Test steps. Activities include worked examples, fill-in-the-blank code, partial code, and solve-from-scratch activities.";
+        "Learn how to transform problems into step-by-step solutions using conditions, loops, and logical thinking.";
 
     }
 
 
     else if(feature == "gamification"){
 
-        title.innerHTML = "Interactive Learning & Gamification";
+        title.innerHTML = "USE C# WITH PURPOSE";
 
         text.innerHTML =
-        "CIE-Sharp uses interactive microgames such as Arrange the Syntax, Complete the Code, Find the Error, Fix the Code, and Choose the Correct Fix. Points and levels are used to support engaging practice.";
+        "C# is more than just writing code. Learn how programming concepts work together to create useful applications and solve real-world problems.";
 
     }
 
 
     else if(feature == "progress"){
 
-        title.innerHTML = "Progress Tracking & Self-Learning";
+        title.innerHTML = "PRACTICE, LEARN, IMPROVE";
 
         text.innerHTML =
-        "Learners can monitor completed challenges, scores, remaining activities, and their overall progress. Activities can also be retried or replayed for additional practice.";
+        "Don't be afraid to make mistakes. Practice writing code, understand your errors, and improve your programming skills one concept at a time.";
 
     }
 
