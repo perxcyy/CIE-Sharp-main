@@ -811,6 +811,26 @@ progress{
     color:#555;
 }
 
+.progress button{
+    display:inline-block;
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:13px 28px;
+    border-radius:7px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+    transition:.3s;
+    margin-top:12px;
+}
+
+.progress button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
 
 /* =========================
    LEARNING OBJECTIVE
@@ -3057,6 +3077,717 @@ nav a,
 
     .character-modal-content {
         padding: 20px 16px;
+    }
+
+}
+
+/* =========================================================
+    PROGRESS PAGE
+========================================================= */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background: #f5f9ff;
+
+    color: #25354d;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.5;
+
+    overflow-x: hidden;
+}
+
+
+/* PAGE HEADER */
+
+.progress-header {
+
+    width: 100%;
+
+    padding:
+        45px 20px
+        30px;
+
+    text-align: center;
+}
+
+
+/* Small title */
+
+.eyebrow {
+
+    margin-bottom: 10px;
+
+    color: #5b8fd8;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* Main title */
+
+.progress-header h1 {
+
+    color: #3672c5;
+
+    font-size: clamp(
+        38px,
+        6vw,
+        58px
+    );
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+/* Subtitle */
+
+.progress-header p {
+
+    margin-top: 12px;
+
+    color: #71839b;
+
+    font-size: 15px;
+
+    line-height: 1.35;
+}
+
+
+/* MAIN CONTAINER */
+
+.progress-container {
+
+    width: min(
+        calc(100% - 32px),
+        900px
+    );
+
+    margin: 0 auto;
+}
+
+
+/*MAIN CARD */
+
+.progress-card {
+
+    width: 100%;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce7f5;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(
+            53,
+            88,
+            130,
+            0.08
+        );
+}
+
+
+/* STATISTICS  */
+
+.statistics-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+
+/* Individual statistic */
+
+.stat-box {
+
+    min-height: 84px;
+
+    padding: 12px 14px;
+
+    background: #eaf3ff;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+
+/* Number */
+
+.stat-box strong {
+
+    display: block;
+
+    color: #4b82ca;
+
+    font-size: 29px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+/* Label */
+
+.stat-box span {
+
+    color: #53677f;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+}
+
+
+/* Extra text */
+
+.stat-box small {
+
+    color: #71839b;
+
+    font-size: 10px;
+}
+
+
+/* SECTION HEADINGS */
+
+.weekly-section,
+.habits-section {
+
+    margin-top: 20px;
+}
+
+
+.weekly-section h2,
+.habits-section h2 {
+
+    margin-bottom: 12px;
+
+    color: #60728b;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* WEEKLY CHART */
+
+.weekly-chart {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 7px;
+
+    align-items: end;
+
+    height: 92px;
+}
+
+
+/* Individual day */
+
+.day {
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    min-width: 0;
+}
+
+
+/* Percentage */
+
+.percentage {
+
+    margin-bottom: 4px;
+
+    color: #70829a;
+
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+
+/* Bar background */
+
+.bar-container {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 82px;
+
+    height: 25px;
+
+    background: #e8f1fc;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+
+/* Bar */
+
+.bar {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    background: #8bb4e8;
+
+    border-radius: 5px;
+
+    transition:
+        height 0.5s ease;
+}
+
+
+/* Active/current day */
+
+.active-day .bar {
+
+    background: #4f86cf;
+}
+
+
+.active-day .percentage {
+
+    color: #4f86cf;
+
+    font-weight: 800;
+}
+
+
+/* Day label */
+
+.day-name {
+
+    margin-top: 5px;
+
+    color: #75879c;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+
+/* TOP HABITS  */
+
+.habit {
+
+    display: grid;
+
+    grid-template-columns:
+        135px 1fr 35px;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 9px;
+}
+
+
+/* Habit name */
+
+.habit-name {
+
+    color: #394b61;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+/* Progress background */
+
+.habit-progress {
+
+    width: 100%;
+
+    height: 5px;
+
+    background: #e8f1fc;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+/* Progress fill */
+
+.habit-fill {
+
+    height: 100%;
+
+    background: #6095d6;
+
+    border-radius: 20px;
+}
+
+
+/* Percentage */
+
+.habit strong {
+
+    color: #4f86cf;
+
+    font-size: 10px;
+
+    text-align: right;
+}
+
+
+/* CONTINUE SECTION */
+
+.continue-section {
+
+    text-align: center;
+
+    padding:
+        25px
+        0
+        35px;
+}
+
+
+/* Button */
+
+.continue-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 205px;
+
+    min-height: 48px;
+
+    padding:
+        12px 25px;
+
+    background: #4f86cf;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 15px rgba(
+            79,
+            134,
+            207,
+            0.20
+        );
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.continue-button:hover {
+
+    background: #3d73ba;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(
+            79,
+            134,
+            207,
+            0.28
+        );
+}
+
+
+/* Description below button */
+
+.continue-section p {
+
+    margin-top: 18px;
+
+    color: #7a8ba0;
+
+    font-size: 11px;
+}
+
+
+/* FOOTER */
+
+footer {
+
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: #eaf3ff;
+
+    color: #71839b;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    border-top:
+        1px solid #dce7f5;
+}
+
+
+/* TABLET */
+
+@media (max-width: 700px) {
+
+    .progress-header {
+
+        padding-top: 35px;
+    }
+
+
+    .progress-card {
+
+        padding: 18px;
+    }
+
+
+    .habit {
+
+        grid-template-columns:
+            115px 1fr 35px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 520px) {
+
+    .progress-header {
+
+        padding:
+            30px
+            15px
+            25px;
+    }
+
+
+    .progress-header h1 {
+
+        font-size: 40px;
+    }
+
+
+    .progress-header p {
+
+        font-size: 13px;
+    }
+
+
+    .progress-container {
+
+        width:
+            calc(100% - 20px);
+    }
+
+
+    .progress-card {
+
+        padding: 14px;
+
+        border-radius: 16px;
+    }
+
+
+    .statistics-grid {
+
+        gap: 8px;
+    }
+
+
+    .stat-box {
+
+        min-height: 78px;
+
+        padding: 10px;
+    }
+
+
+    .stat-box strong {
+
+        font-size: 25px;
+    }
+
+
+    .stat-box span {
+
+        font-size: 10px;
+    }
+
+
+    .weekly-chart {
+
+        gap: 4px;
+
+        height: 82px;
+    }
+
+
+    .percentage {
+
+        font-size: 7px;
+    }
+
+
+    .day-name {
+
+        font-size: 8px;
+    }
+
+
+    .habit {
+
+        grid-template-columns:
+            105px 1fr 32px;
+
+        gap: 7px;
+    }
+
+
+    .habit-name {
+
+        font-size: 10px;
+    }
+
+
+    .habit strong {
+
+        font-size: 9px;
+    }
+
+
+    .continue-button {
+
+        width: 90%;
+
+        max-width: 250px;
+    }
+
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width: 380px) {
+
+    .progress-header h1 {
+
+        font-size: 34px;
+    }
+
+
+    .statistics-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .stat-box {
+
+        min-height: 68px;
+    }
+
+
+    .weekly-chart {
+
+        height: 75px;
+    }
+
+
+    .habit {
+
+        grid-template-columns:
+            90px 1fr 30px;
     }
 
 }
