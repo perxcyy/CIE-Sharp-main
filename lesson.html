@@ -467,6 +467,62 @@
 
 </div>
 
+<script>
+    // Module unlock system
+    function initializeModuleUnlocking() {
+        const moduleCards = document.querySelectorAll(".module-card");
+        
+        // Load progress from localStorage
+        const progress = JSON.parse(localStorage.getItem("moduleProgress") || "{}");
+        
+        // Check each module
+        moduleCards.forEach((card, index) => {
+            const moduleNum = index + 1;
+            const progressSpan = card.querySelector(".module-progress");
+            const button = card.querySelector("button");
+            
+            // Update progress display if saved
+            if (progress[moduleNum]) {
+                if (progressSpan) {
+                    progressSpan.textContent = progress[moduleNum] + "%";
+                }
+                
+                // If this module is 100%, unlock the next one
+                if (progress[moduleNum] === 100 && index + 1 < moduleCards.length) {
+                    const nextCard = moduleCards[index + 1];
+                    const nextButton = nextCard.querySelector("button");
+                    
+                    if (nextButton) {
+                        nextButton.disabled = false;
+                        nextButton.textContent = "Start Module";
+                        nextButton.onclick = function() {
+                            location.href = `lesson${moduleNum + 1}.html`;
+                        };
+                    }
+                }
+            }
+            
+            // If first module, always make sure it's unlocked
+            if (moduleNum === 1 && button) {
+                button.disabled = false;
+            }
+        });
+    }
+    
+    // Function to update module progress
+    function updateModuleProgress(moduleNumber, percentage) {
+        const progress = JSON.parse(localStorage.getItem("moduleProgress") || "{}");
+        progress[moduleNumber] = percentage;
+        localStorage.setItem("moduleProgress", JSON.stringify(progress));
+        
+        // Reinitialize to update UI
+        initializeModuleUnlocking();
+    }
+    
+    // Run on page load
+    window.addEventListener("DOMContentLoaded", initializeModuleUnlocking);
+</script>
+
 <script src="script.js"></script>
 
 <footer>
