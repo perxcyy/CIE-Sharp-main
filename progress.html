@@ -39,6 +39,20 @@
 
         <section class="progress-card">
 
+            <!-- CHARACTER DISPLAY -->
+
+            <div class="character-display">
+                <h2>Your Character</h2>
+                <div class="character-info">
+                    <div class="character-avatar-display" id="displayCharacterAvatar">
+                        🧙
+                    </div>
+                    <div class="character-details">
+                        <h3 id="displayCharacterName">No character yet</h3>
+                        <p id="displayCharacterType">Create one in lessons to get started!</p>
+                    </div>
+                </div>
+            </div>
 
             <!-- STATISTICS -->
 
@@ -359,6 +373,59 @@
     <footer>
         © 2026 CIE-Sharp · Web-Based Microgame Learning Material
     </footer>
+
+    <script>
+        // Load and display saved character
+        function displayCharacter() {
+            const savedCharacter = localStorage.getItem("cieSharpCharacter");
+            
+            if (savedCharacter) {
+                try {
+                    const character = JSON.parse(savedCharacter);
+                    
+                    const avatarElement = document.getElementById("displayCharacterAvatar");
+                    const nameElement = document.getElementById("displayCharacterName");
+                    const typeElement = document.getElementById("displayCharacterType");
+                    
+                    if (avatarElement) {
+                        avatarElement.textContent = character.emoji || "🧙";
+                    }
+                    
+                    if (nameElement) {
+                        nameElement.textContent = character.name || "Your Character";
+                    }
+                    
+                    if (typeElement) {
+                        typeElement.textContent = character.type || "Code Ranger";
+                    }
+                } catch (error) {
+                    console.error("Error loading character:", error);
+                }
+            }
+        }
+
+        // Sync bar heights with percentage values
+        function syncBarHeights() {
+            const days = document.querySelectorAll(".day");
+            
+            days.forEach(day => {
+                const percentageSpan = day.querySelector(".percentage");
+                const barElement = day.querySelector(".bar");
+                
+                if (percentageSpan && barElement) {
+                    const percentageText = percentageSpan.textContent.trim();
+                    const percentageValue = percentageText.replace("%", "");
+                    barElement.style.height = percentageValue + "%";
+                }
+            });
+        }
+        
+        // Load character when page loads
+        window.addEventListener("DOMContentLoaded", () => {
+            displayCharacter();
+            syncBarHeights();
+        });
+    </script>
 
 </body>
 

@@ -3220,6 +3220,50 @@ body {
 }
 
 
+/* CHARACTER DISPLAY */
+
+.character-display {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+.character-display h2 {
+    color: #0c4a6e;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.character-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.character-avatar-display {
+    font-size: 64px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f7ff;
+    border-radius: 12px;
+    border: 2px solid #bfdbfe;
+}
+
+.character-details h3 {
+    color: #1e40af;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.character-details p {
+    color: #0369a1;
+    font-size: 14px;
+}
+
+
 /* STATISTICS  */
 
 .statistics-grid {
