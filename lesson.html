@@ -1,554 +1,638 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <title>CIE-Sharp | Lessons</title>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CIE-Sharp | Adventure</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<header>
-    <a href="index.html" class="back-btn">
-        ← Back
+<!-- =========================
+     GAME HEADER
+========================= -->
+
+<header class="game-header">
+
+    <a href="/index.html" class="back-button">
+        ← Exit
     </a>
 
-    <div class="logo">
-        <h2>CIE-Sharp</h2>
+    <div class="game-logo">
+
+        <img
+            src="/images/cie-sharp-logo.png"
+            alt="CIE-Sharp Logo"
+        >
+
+        <div>
+            <h2>CIE-Sharp</h2>
+            <span>C# Adventure</span>
+        </div>
+
     </div>
 
-    <nav>
-        <a href="lesson.html">Lessons</a>
-        <a href="#">About</a>
-    </nav>
+
+    <div class="player-info">
+
+        <div class="level-info">
+
+            <span>LEVEL</span>
+            <strong>01</strong>
+
+        </div>
+
+        <div class="xp-info">
+
+            <span>XP</span>
+
+            <strong>0 / 100</strong>
+
+        </div>
+
+    </div>
+
 </header>
 
 
-<section class="hero">
-    <h1>C# Arcana</h1>
-    <p>
-        Welcome, Apprentice!
-Your journey into the C# arcane arts begins here. Explore the fundamental concepts of C# through a series of spellcraft lessons, then put your newfound knowledge to the test in interactive microgames and magical challenges.
-    </p>
 
-</section>
+<!-- =========================
+     GAME WORLD
+========================= -->
 
-<section class="progress">
-    <h2>APPRENTICE'S JOURNEY</h2>
-    <progress value="0" max="100"></progress>
-    <p>Every spell you master brings you one step closer to becoming a powerful C# witch.</p>
-        <button onclick="location.href='progress.html'">
-            Open the Grimoire →
-        </button>
-</section>
+<main class="game-world">
 
 
-<section class="modules">
+    <!-- BACKGROUND DECORATION -->
 
-    <!-- MODULE 1 -->
-    <div class="card module-card">
-        <div class="module-image">
-            <img src="images/01_introduction_to_csharp.png" alt="Introduction to C#">
-            <span class="module-progress">0%</span>
-        </div>
+    <div class="dungeon-glow"></div>
 
-        <div class="module-content">
-            <span class="module-number">BOOK 01</span>
+    <div class="book-decoration book-one">📖</div>
 
-            <h2>Introduction to C#</h2>
+    <div class="book-decoration book-two">📚</div>
 
-            <p>
-                Learn what C# is, where it is used,
-                and why it is one of today's popular
-                programming languages.
-            </p>
+    <div class="book-decoration book-three">📕</div>
 
-            <div class="module-info">
-                <span>◉ Beginner</span>
-                <span>⏱ 15 min</span>
-            </div>
 
-            <button onclick="location.href='lesson1.html'">
-                Start Book
-            </button>
-        </div>
-    </div>
 
+    <!-- =========================
+         INTRO
+    ========================= -->
 
-    <!-- MODULE 2 -->
-    <div class="card module-card">
-        <div class="module-image">
-            <img src="images/02_variables_and_data_types.png" alt="Variables and Data Types">
-            <span class="module-progress">0%</span>
-        </div>
+    <section class="game-intro">
 
-        <div class="module-content">
-            <span class="module-number">BOOK 02</span>
+        <span class="chapter-label">
+            THE CIE-SHARP ADVENTURE
+        </span>
 
-            <h2>Variables and Data Types</h2>
+        <h1>
+            The Library of C#
+        </h1>
 
-            <p>
-                Understand how data is stored using
-                variables and different C# data types.
-            </p>
-
-            <div class="module-info">
-                <span>◉ Beginner</span>
-                <span>⏱ 20 min</span>
-            </div>
-
-            <button disabled>
-                Locked
-            </button>
-        </div>
-    </div>
-
-
-    <!-- MODULE 3 -->
-    <div class="card module-card">
-        <div class="module-image">
-            <img src="images/03_operators.png" alt="C# Operators">
-            <span class="module-progress">0%</span>
-        </div>
-
-        <div class="module-content">
-            <span class="module-number">BOOK 03</span>
-
-            <h2>Operators</h2>
-
-            <p>
-                Learn arithmetic, comparison,
-                and logical operators used in C#.
-            </p>
-
-            <div class="module-info">
-                <span>◉ Beginner</span>
-                <span>⏱ 20 min</span>
-            </div>
-
-            <button disabled>
-                Locked
-            </button>
-        </div>
-    </div>
-
-
-    <!-- MODULE 4 -->
-    <div class="card module-card">
-        <div class="module-image">
-            <img src="images/04_conditional_statements.png" alt="Conditional Statements">
-            <span class="module-progress">0%</span>
-        </div>
-
-        <div class="module-content">
-            <span class="module-number">BOOK 04</span>
-
-            <h2>Conditional Statements</h2>
-
-            <p>
-                Learn how if, else, and switch
-                statements control program flow.
-            </p>
-
-            <div class="module-info">
-                <span>◉ Intermediate</span>
-                <span>⏱ 25 min</span>
-            </div>
-
-            <button disabled>
-                Locked
-            </button>
-        </div>
-    </div>
-
-
-    <!-- MODULE 5 -->
-    <div class="card module-card">
-        <div class="module-image">
-            <img src="images/05_loops.png" alt="C# Loops">
-            <span class="module-progress">0%</span>
-        </div>
-
-        <div class="module-content">
-            <span class="module-number">BOOK 05</span>
-
-            <h2>Loops</h2>
-
-            <p>
-                Understand repetition using
-                for, while, and do-while loops.
-            </p>
-
-            <div class="module-info">
-                <span>◉ Intermediate</span>
-                <span>⏱ 25 min</span>
-            </div>
-
-            <button disabled>
-                Locked
-            </button>
-        </div>
-    </div>
-
-
-    <!-- MODULE 6 -->
-    <div class="card module-card">
-        <div class="module-image">
-            <img src="images/06_methods.png" alt="C# Methods">
-            <span class="module-progress">0%</span>
-        </div>
-
-        <div class="module-content">
-            <span class="module-number">BOOK 06</span>
-
-            <h2>Methods</h2>
-
-            <p>
-                Learn how methods organize
-                reusable blocks of code.
-            </p>
-
-            <div class="module-info">
-                <span>◉ Intermediate</span>
-                <span>⏱ 25 min</span>
-            </div>
-
-            <button disabled>
-                Locked
-            </button>
-        </div>
-    </div>
-
-
-    <!-- MODULE 7 -->
-    <div class="card module-card">
-        <div class="module-image">
-            <img src="images/07_arrays.png" alt="C# Arrays">
-            <span class="module-progress">0%</span>
-        </div>
-
-        <div class="module-content">
-            <span class="module-number">BOOK 07</span>
-
-            <h2>Arrays</h2>
-
-            <p>
-                Store and manage multiple
-                values efficiently using arrays.
-            </p>
-
-            <div class="module-info">
-                <span>◉ Intermediate</span>
-                <span>⏱ 25 min</span>
-            </div>
-
-            <button disabled>
-                Locked
-            </button>
-        </div>
-    </div>
-
-
-    <!-- MODULE 8 -->
-    <div class="card module-card">
-        <div class="module-image">
-            <img src="images/08_classes_and_objects.png" alt="Classes and Objects">
-            <span class="module-progress">0%</span>
-        </div>
-
-        <div class="module-content">
-            <span class="module-number">BOOK 08</span>
-
-            <h2>Classes and Objects</h2>
-
-            <p>
-                Explore the basics of object-oriented
-                programming in C#.
-            </p>
-
-            <div class="module-info">
-                <span>◉ Advanced</span>
-                <span>⏱ 30 min</span>
-            </div>
-
-            <button disabled>
-                Locked
-            </button>
-        </div>
-    </div>
-
-
-    <!-- MODULE 9 -->
-    <div class="card module-card">
-        <div class="module-image">
-            <img src="images/09_object_oriented_programming.png" alt="Object Oriented Programming">
-            <span class="module-progress">0%</span>
-        </div>
-
-        <div class="module-content">
-            <span class="module-number">BOOK 09</span>
-
-            <h2>Object-Oriented Programming</h2>
-
-            <p>
-                Apply C# concepts to build
-                organized and reusable programs.
-            </p>
-
-            <div class="module-info">
-                <span>◉ Advanced</span>
-                <span>⏱ 30 min</span>
-            </div>
-
-            <button disabled>
-                Locked
-            </button>
-        </div>
-    </div>
-
-</section>
-
-<section class="objective">
-    <h2>Learning Objective</h2>
-    <p>
-        This instructional material aims to help ICT students
-        strengthen their understanding of the basic concepts of
-        C# programming through lesson-based learning and
-        interactive microgames.
-    </p>
-</section>
-
-<div class="floating-actions" aria-label="Quick actions">
-
-        <!-- Microgame Character Button -->
-    <button
-        id="characterFab"
-        class="floating-action character-fab"
-        type="button"
-        aria-label="Create a microgame character"
-        aria-controls="characterModal"
-        aria-expanded="false"
-        title="Create Microgame Character"
-    >
-        🎮
-    </button>
-
-        <!--Back to top-->
-    <button
-        id="backToTop"
-        class="floating-action back-to-top"
-        type="button"
-        aria-label="Back to top"
-        title="Back to top"
-    >
-        ↑
-    </button>
-</div>
-
-<!-- MICROGAME CHARACTER CREATOR -->
-<div
-    id="characterModal"
-    class="character-modal"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="characterCreatorTitle"
-    aria-hidden="true"
->
-
-    <div class="character-modal-content">
-
-        <button
-            id="closeCharacterModal"
-            class="character-modal-close"
-            type="button"
-            aria-label="Close"
-        >
-            ×
-        </button>
-
-        <h2 id="characterCreatorTitle">
-            Create Your Microgame Character
-        </h2>
-
-        <p class="character-creator-subtitle">
-            Create your character for the CIE-Sharp microgame experience.
+        <p>
+            Enter the ancient library and begin your journey
+            through the world of C# programming.
         </p>
 
+    </section>
 
-        <!-- Character Preview -->
-        <div class="character-preview">
 
-            <div id="characterAvatar" class="character-avatar">
-                🧙
+
+    <!-- =========================
+         ADVENTURE AREA
+    ========================= -->
+
+    <section class="adventure-area">
+
+
+        <!-- CHARACTER PLACEHOLDER -->
+
+        <div class="character-area">
+
+            <div class="character-placeholder">
+
+                <span>?</span>
+
             </div>
 
-            <h3 id="characterPreviewName">
-                Your Character
-            </h3>
+            <div class="character-name">
+                <strong>YOUR CHARACTER</strong>
+                <small>Coming Soon</small>
+            </div>
 
         </div>
 
 
-        <!-- Name -->
-        <label for="characterName">
-            Character Name
-        </label>
 
-        <input
-            type="text"
-            id="characterName"
-            placeholder="Enter character name"
-            maxlength="20"
-        >
+        <!-- =========================
+             MAIN BOOK
+        ========================= -->
+
+        <div class="main-book">
 
 
-        <!-- Character Type -->
-        <label for="characterType">
-            Character Type
-        </label>
+            <div class="book-cover">
 
-        <select id="characterType">
+                <div class="book-symbol">
+                    C#
+                </div>
 
-            <option value="Code Ranger">
-                Rune Witch 🔮
-            </option>
+                <span class="book-small-title">
+                    THE ADVENTURES OF
+                </span>
 
-            <option value="Bug Hunter">
-                Cipher Witch 🗝️
-            </option>
+                <h2>
+                    C# SYNTAX
+                </h2>
 
-            <option value="Logic Knight">
-                Logic Witch 🧠
-            </option>
+                <div class="book-line"></div>
 
-            <option value="Logic Knight">
-                Data Witch 📊
-            </option>
+                <p>
+                    CIE-SHARP
+                </p>
 
-            <option value="Code Ranger">
-                Syntax Witch 📜
-            </option>
-
-            <option value="Syntax Mage">
-                Debug Witch 🐛
-            </option>
-
-            <option value="Bug Hunter">
-                Logiccraft Witch ⚙️
-            </option>
-
-            <option value="Logic Knight">
-                Cyber Witch 🧩
-            </option>
-
-            <option value="Logic Knight">
-                Codeweaver Witch ✨
-            </option>
-
-        </select>
+            </div>
 
 
-        <!-- Character Emoji -->
-        <label for="characterEmoji">
-            Character Avatar
-        </label>
+            <div class="book-pages">
 
-        <select id="characterEmoji">
+                <span class="page-label">
+                    YOUR JOURNEY
+                </span>
 
-            <option value="🧙‍♂️">Wizard</option>
-            <option value="🧝‍♂️">Elf Mage</option>
-            <option value="🧛‍♀️">Vampire Mage</option>
-            <option value="🧑‍🎤">Arcane Bard</option>
-            <option value="🧑‍🚀">Cosmic Mage</option>
-            <option value="🧚‍♀️">Fairy Mage</option>
-            <option value="🧜‍♀️">Mystic Mermaid</option>
-        </select>
+                <h2>
+                    Choose a Chapter
+                </h2>
+
+                <p>
+                    Explore each book, complete the challenges,
+                    and unlock the next part of your adventure.
+                </p>
+
+            </div>
+
+        </div>
 
 
-        <button
-            id="createCharacter"
-            class="create-character-button"
-            type="button"
-        >
-            Create Character
-        </button>
 
-        <p
-            id="characterResult"
-            class="character-result"
-            aria-live="polite"
-        ></p>
+        <!-- =========================
+             QUEST INFO
+        ========================= -->
 
-    </div>
+        <div class="quest-panel">
 
-</div>
+            <div class="quest-title">
+                <span>✦</span>
+                CURRENT QUEST
+            </div>
 
-<script>
-    // Module unlock system
-    function initializeModuleUnlocking() {
-        const moduleCards = document.querySelectorAll(".module-card");
-        
-        // Load progress from localStorage
-        const progress = JSON.parse(localStorage.getItem("moduleProgress") || "{}");
-        
-        // Check each module
-        moduleCards.forEach((card, index) => {
-            const moduleNum = index + 1;
-            const progressSpan = card.querySelector(".module-progress");
-            const button = card.querySelector("button");
-            
-            // Update progress display if saved
-            if (progress[moduleNum]) {
-                if (progressSpan) {
-                    progressSpan.textContent = progress[moduleNum] + "%";
-                }
-                
-                // If this module is 100%, unlock the next one
-                if (progress[moduleNum] === 100 && index + 1 < moduleCards.length) {
-                    const nextCard = moduleCards[index + 1];
-                    const nextButton = nextCard.querySelector("button");
-                    
-                    if (nextButton) {
-                        nextButton.disabled = false;
-                        nextButton.textContent = "Start Module";
-                        nextButton.onclick = function() {
-                            location.href = `lesson${moduleNum + 1}.html`;
-                        };
-                    }
-                }
-            }
-            
-            // If first module, always make sure it's unlocked
-            if (moduleNum === 1 && button) {
-                button.disabled = false;
-            }
-        });
-    }
-    
-    // Function to update module progress
-    function updateModuleProgress(moduleNumber, percentage) {
-        const progress = JSON.parse(localStorage.getItem("moduleProgress") || "{}");
-        progress[moduleNumber] = percentage;
-        localStorage.setItem("moduleProgress", JSON.stringify(progress));
-        
-        // Reinitialize to update UI
-        initializeModuleUnlocking();
-    }
-    
-    // Run on page load
-    window.addEventListener("DOMContentLoaded", initializeModuleUnlocking);
-</script>
+            <h3>
+                Begin Your C# Journey
+            </h3>
 
-<script src="script.js"></script>
+            <p>
+                Enter the first book and learn the foundations
+                of C# programming.
+            </p>
+
+            <div class="quest-progress">
+
+                <div class="quest-progress-bar">
+
+                    <div></div>
+
+                </div>
+
+                <span>
+                    0% Complete
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         BOOK MAP
+    ========================= -->
+
+    <section class="book-map">
+
+
+        <div class="map-title">
+
+            <span>
+                CHAPTER SELECT
+            </span>
+
+            <h2>
+                The C# Learning Books
+            </h2>
+
+            <p>
+                Complete each chapter to continue your journey.
+            </p>
+
+        </div>
+
+
+
+        <div class="books-container">
+
+
+            <!-- BOOK 1 -->
+
+            <button
+                class="story-book active-book"
+                onclick="location.href='lesson1.html'"
+            >
+
+                <div class="book-number">
+                    I
+                </div>
+
+                <div class="book-cover-small">
+
+                    <span>BOOK I</span>
+
+                    <strong>
+                        C#
+                        <br>
+                        BEGINNINGS
+                    </strong>
+
+                </div>
+
+                <div class="book-info">
+
+                    <h3>
+                        Introduction to C#
+                    </h3>
+
+                    <p>
+                        Discover what C# is and begin
+                        your programming adventure.
+                    </p>
+
+                    <span class="play-label">
+                        ▶ START CHAPTER
+                    </span>
+
+                </div>
+
+            </button>
+
+
+
+            <!-- BOOK 2 -->
+
+            <div class="story-book locked-book">
+
+                <div class="book-number">
+                    II
+                </div>
+
+                <div class="book-cover-small">
+
+                    <span>BOOK II</span>
+
+                    <strong>
+                        DATA
+                        <br>
+                        VAULT
+                    </strong>
+
+                </div>
+
+                <div class="book-info">
+
+                    <h3>
+                        Variables & Data Types
+                    </h3>
+
+                    <p>
+                        Learn how C# stores and manages
+                        different kinds of information.
+                    </p>
+
+                    <span class="lock-label">
+                        🔒 LOCKED
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BOOK 3 -->
+
+            <div class="story-book locked-book">
+
+                <div class="book-number">
+                    III
+                </div>
+
+                <div class="book-cover-small">
+
+                    <span>BOOK III</span>
+
+                    <strong>
+                        OPERATOR
+                        <br>
+                        FORGE
+                    </strong>
+
+                </div>
+
+                <div class="book-info">
+
+                    <h3>
+                        Operators
+                    </h3>
+
+                    <p>
+                        Master arithmetic, comparison,
+                        and logical operators.
+                    </p>
+
+                    <span class="lock-label">
+                        🔒 LOCKED
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BOOK 4 -->
+
+            <div class="story-book locked-book">
+
+                <div class="book-number">
+                    IV
+                </div>
+
+                <div class="book-cover-small">
+
+                    <span>BOOK IV</span>
+
+                    <strong>
+                        LOGIC
+                        <br>
+                        GATE
+                    </strong>
+
+                </div>
+
+                <div class="book-info">
+
+                    <h3>
+                        Conditional Statements
+                    </h3>
+
+                    <p>
+                        Learn how programs make decisions
+                        using conditions.
+                    </p>
+
+                    <span class="lock-label">
+                        🔒 LOCKED
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BOOK 5 -->
+
+            <div class="story-book locked-book">
+
+                <div class="book-number">
+                    V
+                </div>
+
+                <div class="book-cover-small">
+
+                    <span>BOOK V</span>
+
+                    <strong>
+                        LOOP
+                        <br>
+                        DUNGEON
+                    </strong>
+
+                </div>
+
+                <div class="book-info">
+
+                    <h3>
+                        Loops
+                    </h3>
+
+                    <p>
+                        Explore repetition using for,
+                        while, and do-while loops.
+                    </p>
+
+                    <span class="lock-label">
+                        🔒 LOCKED
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BOOK 6 -->
+
+            <div class="story-book locked-book">
+
+                <div class="book-number">
+                    VI
+                </div>
+
+                <div class="book-cover-small">
+
+                    <span>BOOK VI</span>
+
+                    <strong>
+                        METHOD
+                        <br>
+                        HALL
+                    </strong>
+
+                </div>
+
+                <div class="book-info">
+
+                    <h3>
+                        Methods
+                    </h3>
+
+                    <p>
+                        Learn how reusable blocks of
+                        code organize your programs.
+                    </p>
+
+                    <span class="lock-label">
+                        🔒 LOCKED
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BOOK 7 -->
+
+            <div class="story-book locked-book">
+
+                <div class="book-number">
+                    VII
+                </div>
+
+                <div class="book-cover-small">
+
+                    <span>BOOK VII</span>
+
+                    <strong>
+                        ARRAY
+                        <br>
+                        CHAMBER
+                    </strong>
+
+                </div>
+
+                <div class="book-info">
+
+                    <h3>
+                        Arrays
+                    </h3>
+
+                    <p>
+                        Store multiple values using
+                        arrays.
+                    </p>
+
+                    <span class="lock-label">
+                        🔒 LOCKED
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BOOK 8 -->
+
+            <div class="story-book locked-book">
+
+                <div class="book-number">
+                    VIII
+                </div>
+
+                <div class="book-cover-small">
+
+                    <span>BOOK VIII</span>
+
+                    <strong>
+                        OBJECT
+                        <br>
+                        CASTLE
+                    </strong>
+
+                </div>
+
+                <div class="book-info">
+
+                    <h3>
+                        Classes & Objects
+                    </h3>
+
+                    <p>
+                        Enter the world of object-oriented
+                        programming.
+                    </p>
+
+                    <span class="lock-label">
+                        🔒 LOCKED
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         GAME RULE
+    ========================= -->
+
+    <section class="game-tip">
+
+        <div class="tip-icon">
+            💡
+        </div>
+
+        <div>
+
+            <strong>
+                ADVENTURER'S TIP
+            </strong>
+
+            <p>
+                Complete the activities inside each book
+                to earn XP and unlock the next chapter.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
+
     <p>
         © 2026 CIE-Sharp |
         Web-Based Microgame Learning Material |
         BSIE-ICT Research Project
     </p>
+
 </footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>

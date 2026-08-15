@@ -3,315 +3,764 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CIE-Sharp</title>
+    <title>CIE-Sharp | C# Learning Microgame</title>
 
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
     <div class="logo">
         <img src="images/cie-sharp-logo.png" alt="CIE-Sharp Logo">
-        <h2>CIE-Sharp</h2>
+
+        <div class="logo-text">
+            <h2>CIE-Sharp</h2>
+            <span>C# Learning Microgame</span>
+        </div>
     </div>
 
     <nav>
-        <a href="curriculum.html"> Witch's Path</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="curriculum.html">Curriculum Map</a>
+        <a href="about.html">About</a>
     </nav>
+
 </header>
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
-    <h1>Welcome to CIE-Sharp</h1>
-    <h2>Your journey into the arcane world of C# begins here.
-</h2>
-    <p>
-        Take on the role of an apprentice coder and uncover the secrets of C# through spellcraft lessons, mysterious challenges, and interactive microgames. Master each skill, overcome every trial, and discover how powerful your code can become.
-    </p>
 
-    <button onclick="location.href='lesson.html'" class="btn">
-        Start your Journey
-    </button>
+    <div class="hero-content">
 
-    <button onclick="location.href='about.html'" class="btn">
-        About CIE-Sharp
-    </button>
-</section>
+        <div class="hero-text">
 
-<!-- LEARNING FEATURES -->
-<section class="section" id="features">
-    <h2>The Magic Within CIE-Sharp</h2>
-    <p class="features-intro">
-        Step into the world of CIE-Sharp and learn the art of C# spellcraft. Practice through interactive lessons, face increasingly challenging trials, uncover solutions through guided problem-solving, and watch your mastery grow as you progress through the arcane path.
-    </p>
-    <br>
-    <h2>What Awaits, Apprentice?</h2>
+            <span class="hero-label">
+                WEB-BASED C# LEARNING MICROGAME
+            </span>
 
-    <div class="features">
-        <!-- F1 -->
-        <button class="feature-card"
-                onclick="showInfo('progressive')">
-            <img src="images/01_progressive_syntax(1).png"
-                 alt="Progressive Syntax Challenges"
-                 class="feature-icon">
-            <h2>Progressive Trials</h2>
-            <h3>Progressive Syntax Challenges</h3>
+            <h1>
+                Learn C# Syntax.
+                <span>Practice. Improve.</span>
+            </h1>
+
             <p>
-                Take on challenges that become more demanding as you advance.
+                CIE-Sharp is a web-based microgame learning material
+                designed to help ICT students develop their understanding
+                of C# syntax formatting through interactive lessons,
+                guided activities, challenges, and immediate feedback.
             </p>
-        </button>
 
-        <!-- F2 -->
-        <button class="feature-card"
-                onclick="showInfo('guided')">
-            <img src="images/02_guided_problem_solving.png"
-                 alt="Guided Problem-Solving"
-                 class="feature-icon">
-            <h2>Guided Challenges</h2>
-            <h3>Guided Problem-Solving</h3>
-            <p>
-                Receive helpful guidance as you work through C# problems.
-            </p>
-        </button>
+            <div class="hero-buttons">
 
-        <!-- F3 -->
-        <button class="feature-card"
-                onclick="showInfo('gamification')">
-            <img src="images/03_interactive_learning_gamification.png"
-                 alt="Interactive Learning and Gamification"
-                 class="feature-icon">
-            <h2>Interactive Spellcraft</h2>
-            <h3>Interactive Learning & Gamification</h3>
-            <p>
-                Explore C# concepts through engaging lessons and activities.
-            </p>
-        </button>
+                <button
+                    onclick="location.href='lesson.html'"
+                    class="btn primary-btn">
+                    Start Learning →
+                </button>
 
-        <!-- F4 -->
-        <button class="feature-card"
-                onclick="showInfo('progress')">
-            <img src="images/04_progress_tracking_self_learning.png"
-                 alt="Progress Tracking and Self-Learning"
-                 class="feature-icon">
-            <h2>Chronicle & Mastery</h2>
-            <h3>Progress Tracking & Self-Learning</h3>
-            <p>
-                Build your C# skills and strengthen your understanding with every completed challenge. Keep track of your completed Spellcraft, Trials, and learning progress.
-            </p>
-        </button>
+                <button
+                    onclick="location.href='curriculum.html'"
+                    class="btn secondary-btn">
+                    Explore Curriculum
+                </button>
 
-        <!-- F5 -->
-        <button class="feature-card"
-                onclick="showInfo('feedback')">
-            <img src="images/05_feedback_error_support.png"
-                 alt="Immediate Feedback and Error Support"
-                 class="feature-icon">
-            <h2>Spellcraft Guidance</h2>
-            <h3>Immediate Feedback & Error Support</h3>
-            <p>
-                Discover what went wrong in your spell and learn how to cast it correctly.
-            </p>
-        </button>
-    </div>
-</section>
-
-<!-- CREATIVE RESOURCE -->
-<section class="section" id="features">
-    <h2>Begin Your C# Spellcraft Journey</h2>
-    <h3 class="features-intro">
-        Master C# with Purpose
-    </h3>
-    <p>
-
-        Begin with the foundations of C# and progress toward more advanced concepts through guided Spellcraft, practical examples, and Challenges designed to strengthen your programming skills.
-
-    </p>
-<br>
-
-<section class="two-column">
-  <div class="story">
-    <h2>A C# Spellcraft Resource</h2>
-    <h3>Crafted for C# Apprentices</h3>
-<p>
-    Every apprentice begins with the fundamentals. This resource guides you through C# step by step—from variables and data types to classes, objects, and more. Through Spellcraft, Challenges, and Trials, you can build your programming knowledge, strengthen your skills, and grow your Mastery through hands-on practice.
-</p>
-<br>
-    <li>Understanding C# Fundamentals</li>
-    <li>Learning Programming Logic</li>
-    <li>Practicing C# Syntax</li>
-    <li>Solving Programming Problems</li>
-    <li>Understanding Object-Oriented Programming</li>
-    <li>Building Confidence Through Practice</li>
-    <li>Applying C# Concepts to Real-World Scenarios</li>
-
-  </div>
-    <iframe
-        class="ciepage-video"
-        width="560"
-        height="315"
-        src="https://pin.it/4NNlC5ZQN"
-        title="Cornell Note-Taking"
-        frameborder="0"
-        allowfullscreen>
-    </iframe>
-</section>
-<br>
-
-<!--GUIDE INFORMATION   -->
-<section class="section" id="features">
-    <h2>Why This Guide Is Different?</h2>
-    <p class="features-intro">
-        We don't just teach you how to write C# code. We help you understand why the code works, how programming concepts connect, and how to apply what you learn to real problems.
-    </p>
-    <br>
-
-    <div class="features">
-        <!-- F1 -->
-        <button class="feature-card"
-                onclick="showInfo('progressive')">
-            <img src=".png"
-                 alt="Progressive Syntax Challenges"
-                 class="feature-icon">
-            <h2>BEGIN YOUR SPELLCRAFT</h2>
-            <h3>Start with the basics</h3>
-            <p>
-                Build your foundation by learning variables, data types, operators, and basic C# syntax. Master these essential spells before advancing to more complex concepts.
-            </p>
-        </button>
-
-        <!-- F2 -->
-        <button class="feature-card"
-                onclick="showInfo('guided')">
-            <img src="images/07_turn_logic_into_code.png"
-                 alt="Guided Problem-Solving"
-                 class="feature-icon">
-            <h3>TURN LOGIC INTO CODE</h3>
-            <p>
-                Learn how to turn problems into step-by-step solutions using conditions, loops, and logical thinking. Strengthen your reasoning as you take on each new challenge.
-            </p>
-        </button>
-
-        <!-- F3 -->
-        <button class="feature-card"
-                onclick="showInfo('gamification')">
-            <img src="images/08_use_csharp_with_purpose.png"
-                 alt="Interactive Learning and Gamification"
-                 class="feature-icon">
-            <h3>USE C# WITH PURPOSE</h3>
-            <p>
-                Go beyond writing code. Discover how C# concepts work together to create useful applications and solve real-world problems through practical challenges.
-            </p>
-        </button>
-
-        <!-- F4 -->
-        <button class="feature-card"
-                onclick="showInfo('progress')">
-            <img src="images/09_practice_learn_improve.png"
-                 alt="Progress Tracking and Self-Learning"
-                 class="feature-icon">
-            <h3>PRACTICE, LEARN, IMPROVE</h3>
-            <p>
-                Mistakes are part of every apprentice's journey. Practice writing C#, learn from each challenge, and strengthen your skills one concept at a time.
-            </p>
-        </button>
-    </div>
-</section>
-
-
-<!-- FEATURE INFORMATION BOX -->
-<div id="featureBox" class="info-box">
-    <div class="info-content">
-        <button class="close-btn" onclick="closeInfo()">
-            ×
-        </button>
-        <h2 id="infoTitle"></h2>
-        <p id="infoText"></p>
-    </div>
-</div>
-
-<!-- RESEARCHERS -->
-<section class="section" id="developers">
-    <h2>Researchers & Developers</h2>
-    <button
-        class="feature-card developer-button"
-        onclick="showResearchers()"
-    >
-        <h3>CIE-Sharp Research Team</h3>
-        <p>
-            View the researchers and developers
-            behind CIE-Sharp.
-        </p>
-    </button>
-</section>
-
-<!-- RESEARCHER INFORMATION BOX -->
-<div id="researcherBox" class="info-box">
-    <div class="researcher-content">
-        <button class="close-btn" onclick="closeResearchers()">
-            ×
-        </button>
-
-        <!-- TITLE -->
-        <h2 class="researcher-title">
-            Meet the CIE-Sharp Researcher Team
-        </h2>
-
-        <!-- RESEARCHER PROFILE -->
-        <div class="researcher-profile">
-            <div class="researcher-image">
-                <img id="researcherImage"
-                     src="images/marciales.jpg"
-                     alt="Researcher">
             </div>
 
+        </div>
+
+
+        <!-- HERO CODE CARD -->
+
+        <div class="hero-code">
+
+            <div class="code-header">
+
+                <div class="code-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span>CSharp.cs</span>
+
+            </div>
+
+            <div class="code-content">
+
+                <p>
+                    <span class="code-keyword">using</span>
+                    System;
+                </p>
+
+                <p></p>
+
+                <p>
+                    <span class="code-keyword">class</span>
+                    Program
+                </p>
+
+                <p>{</p>
+
+                <p class="indent">
+                    <span class="code-keyword">static void</span>
+                    Main()
+                </p>
+
+                <p class="indent">{</p>
+
+                <p class="indent-2">
+                    Console.WriteLine(
+                </p>
+
+                <p class="indent-2">
+                    <span class="code-string">
+                        "Hello, C#!"
+                    </span>);
+                </p>
+
+                <p class="indent">}</p>
+
+                <p>}</p>
+
+            </div>
+
+            <div class="code-status">
+                ✓ Syntax Practice Ready
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LEARNING PATH
+========================= -->
+
+<section class="section learning-path">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            HOW CIE-SHARP WORKS
+        </span>
+
+        <h2>
+            Learn Through a Simple Learning Path
+        </h2>
+
+        <p>
+            Follow a structured sequence that allows you to learn,
+            practice, assess your understanding, and receive feedback.
+        </p>
+
+    </div>
+
+
+    <div class="path-container">
+
+        <!-- STEP 1 -->
+
+        <div class="path-card">
+
+            <div class="path-number">01</div>
+
+            <div class="path-icon">📖</div>
+
+            <h3>Teach</h3>
+
+            <p>
+                Understand C# syntax concepts through short,
+                organized learning materials.
+            </p>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+
+        <div class="path-card">
+
+            <div class="path-number">02</div>
+
+            <div class="path-icon">⌨</div>
+
+            <h3>Practice</h3>
+
+            <p>
+                Apply what you learned through guided
+                syntax-formatting activities.
+            </p>
+
+        </div>
+
+
+        <!-- STEP 3 -->
+
+        <div class="path-card">
+
+            <div class="path-number">03</div>
+
+            <div class="path-icon">✓</div>
+
+            <h3>Assess</h3>
+
+            <p>
+                Test your understanding through interactive
+                challenges and activities.
+            </p>
+
+        </div>
+
+
+        <!-- STEP 4 -->
+
+        <div class="path-card">
+
+            <div class="path-number">04</div>
+
+            <div class="path-icon">💡</div>
+
+            <h3>Feedback</h3>
+
+            <p>
+                Receive immediate feedback, hints, and
+                opportunities to improve your answers.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="section features-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            LEARNING FEATURES
+        </span>
+
+        <h2>
+            Everything You Need to Practice C# Syntax
+        </h2>
+
+        <p>
+            CIE-Sharp combines interactive learning activities,
+            guided problem-solving, gamification, progress support,
+            and immediate feedback.
+        </p>
+
+    </div>
+
+
+    <div class="features-grid">
+
+
+        <!-- FEATURE 1 -->
+
+        <button
+            class="feature-card"
+            onclick="showInfo('progressive')">
+
+            <img
+                src="images/01_progressive_syntax(1).png"
+                alt="Progressive Syntax Challenges"
+                class="feature-icon">
+
+            <div class="feature-number">01</div>
+
+            <h3>
+                Progressive Syntax Challenges
+            </h3>
+
+            <p>
+                Practice C# syntax through gradually increasing
+                levels of difficulty.
+            </p>
+
+            <span class="feature-link">
+                Learn more →
+            </span>
+
+        </button>
+
+
+        <!-- FEATURE 2 -->
+
+        <button
+            class="feature-card"
+            onclick="showInfo('guided')">
+
+            <img
+                src="images/02_guided_problem_solving.png"
+                alt="Guided Problem-Solving"
+                class="feature-icon">
+
+            <div class="feature-number">02</div>
+
+            <h3>
+                Guided Problem-Solving
+            </h3>
+
+            <p>
+                Follow structured steps to understand,
+                plan, code, and test your solution.
+            </p>
+
+            <span class="feature-link">
+                Learn more →
+            </span>
+
+        </button>
+
+
+        <!-- FEATURE 3 -->
+
+        <button
+            class="feature-card"
+            onclick="showInfo('gamification')">
+
+            <img
+                src="images/03_interactive_learning_gamification.png"
+                alt="Interactive Learning and Gamification"
+                class="feature-icon">
+
+            <div class="feature-number">03</div>
+
+            <h3>
+                Interactive Learning & Gamification
+            </h3>
+
+            <p>
+                Learn through interactive activities,
+                challenges, points, and levels.
+            </p>
+
+            <span class="feature-link">
+                Learn more →
+            </span>
+
+        </button>
+
+
+        <!-- FEATURE 4 -->
+
+        <button
+            class="feature-card"
+            onclick="showInfo('progress')">
+
+            <img
+                src="images/04_progress_tracking_self_learning.png"
+                alt="Progress Tracking"
+                class="feature-icon">
+
+            <div class="feature-number">04</div>
+
+            <h3>
+                Progress Tracking
+            </h3>
+
+            <p>
+                Monitor completed activities and
+                follow your learning progress.
+            </p>
+
+            <span class="feature-link">
+                Learn more →
+            </span>
+
+        </button>
+
+
+        <!-- FEATURE 5 -->
+
+        <button
+            class="feature-card"
+            onclick="showInfo('feedback')">
+
+            <img
+                src="images/05_feedback_error_support.png"
+                alt="Immediate Feedback"
+                class="feature-icon">
+
+            <div class="feature-number">05</div>
+
+            <h3>
+                Immediate Feedback
+            </h3>
+
+            <p>
+                Get hints, error explanations,
+                corrections, and retry opportunities.
+            </p>
+
+            <span class="feature-link">
+                Learn more →
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY CIE-SHARP
+========================= -->
+
+<section class="why-section">
+
+    <div class="why-container">
+
+        <div class="why-text">
+
+            <span class="section-label">
+                WHY CIE-SHARP?
+            </span>
+
+            <h2>
+                Learn C# With Practice,
+                Not Just Reading.
+            </h2>
+
+            <p>
+                Programming becomes easier when students can
+                immediately apply what they learn. CIE-Sharp
+                provides a structured environment where learners
+                can study C# syntax, practice through activities,
+                and receive feedback on their performance.
+            </p>
+
+            <div class="check-list">
+
+                <div>
+                    <span>✓</span>
+                    Curriculum-aligned learning activities
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Beginner-friendly syntax practice
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Interactive and gamified activities
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Immediate feedback and correction support
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="mini-window">
+
+                <div class="mini-header">
+                    C# Syntax Challenge
+                </div>
+
+                <div class="mini-body">
+
+                    <span class="mini-label">
+                        FIX THE SYNTAX
+                    </span>
+
+                    <div class="mini-code">
+                        Console.WriteLine<span>(</span><br>
+                        <span class="mini-indent">
+                            "Hello World!"
+                        </span><br>
+                        <span>);</span>
+                    </div>
+
+                    <button>
+                        Check Answer
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LEARNING TOPICS
+========================= -->
+
+<section class="section topics-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            CURRICULUM PREVIEW
+        </span>
+
+        <h2>
+            Explore C# Learning Topics
+        </h2>
+
+        <p>
+            Build your programming foundation one concept at a time.
+        </p>
+
+    </div>
+
+
+    <div class="topics-grid">
+
+        <div class="topic-card">
+            <span>01</span>
+            <h3>C# Fundamentals</h3>
+            <p>
+                Basic programming concepts and syntax.
+            </p>
+        </div>
+
+        <div class="topic-card">
+            <span>02</span>
+            <h3>Variables & Data Types</h3>
+            <p>
+                Learn how information is stored and used.
+            </p>
+        </div>
+
+        <div class="topic-card">
+            <span>03</span>
+            <h3>Operators & Expressions</h3>
+            <p>
+                Understand how values and expressions work.
+            </p>
+        </div>
+
+        <div class="topic-card">
+            <span>04</span>
+            <h3>Control Structures</h3>
+            <p>
+                Practice conditions and logical flow.
+            </p>
+        </div>
+
+    </div>
+
+
+    <button
+        onclick="location.href='curriculum.html'"
+        class="btn primary-btn topic-button">
+
+        View Curriculum Map →
+
+    </button>
+
+</section>
+
+
+<!-- =========================
+     FEATURE INFORMATION BOX
+========================= -->
+
+<div id="featureBox" class="info-box">
+
+    <div class="info-content">
+
+        <button
+            class="close-btn"
+            onclick="closeInfo()">
+            ×
+        </button>
+
+        <h2 id="infoTitle"></h2>
+
+        <p id="infoText"></p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     RESEARCHERS
+========================= -->
+
+<section class="researcher-section">
+
+    <div class="researcher-wrapper">
+
+        <div class="researcher-heading">
+
+            <span class="section-label">
+                THE RESEARCH TEAM
+            </span>
+
+            <h2>
+                Meet the CIE-Sharp Researchers
+            </h2>
+
+            <p>
+                CIE-Sharp was developed through the collaborative
+                work of the researchers and developers of the
+                BSIE-ICT program.
+            </p>
+
+        </div>
+
+
+        <button
+            class="researcher-button"
+            onclick="showResearchers()">
+
+            <span class="researcher-button-icon">
+                👥
+            </span>
+
+            <span>
+                <strong>View Research Team</strong>
+                <small>
+                    Researchers & Developers
+                </small>
+            </span>
+
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RESEARCHER MODAL
+========================= -->
+
+<div id="researcherBox" class="info-box">
+
+    <div class="researcher-content">
+
+        <button
+            class="close-btn"
+            onclick="closeResearchers()">
+            ×
+        </button>
+
+
+        <h2 class="researcher-title">
+            Meet the CIE-Sharp Research Team
+        </h2>
+
+
+        <div class="researcher-profile">
+
+            <div class="researcher-image">
+
+                <img
+                    id="researcherImage"
+                    src="images/marciales.jpg"
+                    alt="Researcher">
+
+            </div>
+
+
             <div class="researcher-info">
+
                 <h2 id="researcherName">
                     Marciales, Raynan A.
                 </h2>
+
                 <h3 id="researcherRole">
                     Main Developer
                 </h3>
+
                 <p id="researcherDescription">
                     Responsible for the development and implementation
                     of the CIE-Sharp web-based microgame learning material.
                 </p>
+
             </div>
+
         </div>
 
 
-        <!-- NAVIGATION -->
         <div class="researcher-navigation">
-            <button id="prevResearcher"
-                    onclick="previousResearcher()"
-                    disabled>
+
+            <button
+                id="prevResearcher"
+                onclick="previousResearcher()"
+                disabled>
+
                 ← Previous
+
             </button>
 
-           <!-- COUNTER -->
+
             <span id="researcherNumberBottom">
-            1 / 5
-             </span>
-            <button id="nextResearcher"
-                    onclick="nextResearcher()">
+                1 / 5
+            </span>
+
+
+            <button
+                id="nextResearcher"
+                onclick="nextResearcher()">
+
                 Next →
+
             </button>
+
         </div>
 
-        <!-- SCHOOL INFORMATION -->
+
         <div class="researcher-school">
+
             <p>
                 BSIE-ICT | College of Industrial Education<br>
                 Technological University of the Philippines – Manila
             </p>
+
         </div>
 
-        <!-- FINAL TEAM SUMMARY -->
-        <div id="researchTeamSummary" class="research-team-summary">
-            <h2>CIE-Sharp Research Team</h2>
+
+        <div
+            id="researchTeamSummary"
+            class="research-team-summary">
+
+            <h2>
+                CIE-Sharp Research Team
+            </h2>
+
             <p>
                 The CIE-Sharp research team consists of the
                 researchers and developers who contributed to the
@@ -319,44 +768,89 @@
                 material for ICT students.
             </p>
 
+
             <div class="researcher-list">
+
                 <p>Domingo, Noe D.</p>
+
                 <p>Gidayawan, Joses D.</p>
-                <p>Inquig, Precious Gold B. – Research Leader</p>
-                <p>Marciales, Raynan A. – Main Developer</p>
+
+                <p>
+                    Inquig, Precious Gold B. –
+                    Research Leader
+                </p>
+
+                <p>
+                    Marciales, Raynan A. –
+                    Main Developer
+                </p>
+
                 <p>Sorinio, Bea A.</p>
+
             </div>
 
-            <button class="exit-researcher-btn"
-                    onclick="closeResearchers()">
+
+            <button
+                class="exit-researcher-btn"
+                onclick="closeResearchers()">
+
                 Close
+
             </button>
+
         </div>
+
     </div>
-</div>
-
-<!-- FLOATING ACTION BUTTONS -->
-<div class="floating-actions" aria-label="Quick actions">
-
-    <!-- Back to Top Button -->
-    <button
-        id="backToTop"
-        class="floating-action back-to-top"
-        type="button"
-        aria-label="Back to top"
-        title="Back to top"
-    >
-        ↑
-    </button>
 
 </div>
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-    <p>
-        © 2026 CIE-Sharp | BSIE-ICT Research Project
-    </p>
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+
+            <img
+                src="images/cie-sharp-logo.png"
+                alt="CIE-Sharp Logo">
+
+            <div>
+                <strong>CIE-Sharp</strong>
+
+                <p>
+                    C# Learning Microgame
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-text">
+
+            <p>
+                A web-based supplementary learning material
+                for C# syntax formatting.
+            </p>
+
+            <span>
+                © 2026 CIE-Sharp | BSIE-ICT Research Project
+            </span>
+
+        </div>
+
+    </div>
+
 </footer>
+
+
 <script src="script.js"></script>
+
 </body>
+
+
 </html>
