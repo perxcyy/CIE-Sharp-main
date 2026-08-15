@@ -3124,8 +3124,8 @@ body {
     width: 100%;
 
     padding:
-        45px 20px
-        30px;
+        12px 20px
+        16px;
 
     text-align: center;
 }
@@ -3156,7 +3156,7 @@ body {
     color: #3672c5;
 
     font-size: clamp(
-        38px,
+        50px,
         6vw,
         58px
     );
@@ -3223,6 +3223,7 @@ body {
 /* CHARACTER DISPLAY */
 
 .character-display {
+    margin-top: 24px;
     margin-bottom: 28px;
     padding-bottom: 20px;
     border-bottom: 2px solid #dbeafe;
