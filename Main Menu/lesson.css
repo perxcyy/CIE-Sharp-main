@@ -1,0 +1,1617 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body{
+
+    font-family:'VT323', monospace;
+
+    background:#080c17;
+
+    color:#cbd5e1;
+
+    line-height:1.6;
+
+    font-size:18px;
+
+}
+
+
+/* =========================
+   GAME HEADER
+========================= */
+
+.game-header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+    min-height:72px;
+
+    padding:10px 6%;
+
+    background:#111827;
+
+    border-bottom:2px solid #263451;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.35);
+
+}
+
+
+.game-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+.game-logo img{
+
+    width:42px;
+
+    height:42px;
+
+    object-fit:contain;
+
+}
+
+
+.game-logo h2{
+
+    color:#f8fafc;
+
+    font-family:'Press Start 2P', cursive;
+
+    font-size:16px;
+
+}
+
+
+.game-logo span{
+
+    color:#64748b;
+
+    font-family:'VT323', monospace;
+
+    font-size:15px;
+
+    text-transform:uppercase;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+}
+
+
+.back-button{
+
+    text-decoration:none;
+
+    color:#cbd5e1;
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    padding:8px 14px;
+
+    border-radius:7px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+
+.back-button:hover{
+
+    background:#334155;
+
+    color:white;
+
+    transform:translateX(-3px);
+
+}
+
+
+.player-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+
+.level-info,
+.xp-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    text-align:right;
+
+}
+
+
+.level-info span,
+.xp-info span{
+
+    color:#64748b;
+
+    font-family:'VT323', monospace;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+}
+
+
+.level-info strong{
+
+    color:#60a5fa;
+
+    font-family:'Press Start 2P', cursive;
+
+    font-size:12px;
+
+}
+
+
+.xp-info strong{
+
+    color:#cbd5e1;
+
+    font-family:'VT323', monospace;
+
+    font-size:17px;
+
+}
+
+
+/* =========================
+   GAME WORLD
+========================= */
+
+.game-world{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:100vh;
+
+    padding:70px 6% 100px;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(37,99,235,.13),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(124,58,237,.08),
+            transparent 30%
+        ),
+
+        #0b1020;
+
+}
+
+
+/* =========================
+   DUNGEON GRID
+========================= */
+
+.game-world::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.12;
+
+    pointer-events:none;
+
+    background-image:
+
+        linear-gradient(
+            #64748b 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            #64748b 1px,
+            transparent 1px
+        );
+
+    background-size:60px 60px;
+
+}
+
+
+/* =========================
+   DUNGEON GLOW
+========================= */
+
+.dungeon-glow{
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    filter:blur(180px);
+
+    opacity:.07;
+
+    top:100px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+
+/* =========================
+   DECORATIVE BOOKS
+========================= */
+
+.book-decoration{
+
+    position:absolute;
+
+    font-size:55px;
+
+    opacity:.08;
+
+    pointer-events:none;
+
+}
+
+
+.book-one{
+
+    top:160px;
+
+    left:5%;
+
+    transform:rotate(-15deg);
+
+}
+
+
+.book-two{
+
+    top:500px;
+
+    right:5%;
+
+    transform:rotate(15deg);
+
+}
+
+
+.book-three{
+
+    bottom:200px;
+
+    left:8%;
+
+    transform:rotate(12deg);
+
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.game-intro{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:800px;
+
+    margin:0 auto 50px;
+
+    text-align:center;
+
+}
+
+
+.chapter-label{
+
+    display:inline-block;
+
+    padding:7px 15px;
+
+    border:1px solid #334155;
+
+    border-radius:20px;
+
+    background:#111827;
+
+    color:#60a5fa;
+
+    font-family:'VT323', monospace;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:18px;
+
+}
+
+
+.game-intro h1{
+
+    color:#f8fafc;
+
+    font-family:'Press Start 2P', cursive;
+
+    font-size:32px;
+
+    line-height:1.5;
+
+    margin-bottom:18px;
+
+    text-shadow:
+
+        3px 3px 0 #172554,
+
+        0 0 20px rgba(96,165,250,.15);
+
+}
+
+
+.game-intro p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:#94a3b8;
+
+    font-family:'VT323', monospace;
+
+    font-size:21px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================
+   ADVENTURE AREA
+========================= */
+
+.adventure-area{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    min-height:470px;
+
+    display:grid;
+
+    grid-template-columns:180px 1fr 220px;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+
+/* =========================
+   CHARACTER
+========================= */
+
+.character-area{
+
+    text-align:center;
+
+}
+
+
+.character-placeholder{
+
+    width:135px;
+
+    height:170px;
+
+    margin:auto;
+
+    border:2px dashed #475569;
+
+    border-radius:18px;
+
+    background:#111827;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+
+}
+
+
+.character-placeholder span{
+
+    width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#1e293b;
+
+    border:2px solid #475569;
+
+    color:#64748b;
+
+    font-size:30px;
+
+}
+
+
+.character-name{
+
+    margin-top:12px;
+
+}
+
+
+.character-name strong{
+
+    display:block;
+
+    color:#cbd5e1;
+
+    font-family:'Press Start 2P', cursive;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+
+}
+
+
+.character-name small{
+
+    color:#64748b;
+
+    font-family:'VT323', monospace;
+
+    font-size:16px;
+
+}
+
+
+/* =========================
+   MAIN BOOK
+========================= */
+
+.main-book{
+
+    position:relative;
+
+    min-height:390px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    filter:drop-shadow(
+        0 25px 35px rgba(0,0,0,.4)
+    );
+
+}
+
+
+/* =========================
+   BOOK COVER
+========================= */
+
+.book-cover{
+
+    position:relative;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #1e3a8a,
+            #172554
+        );
+
+    border-radius:8px 3px 3px 8px;
+
+    padding:45px 35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    border:3px solid #334155;
+
+    box-shadow:
+
+        inset -8px 0 0 rgba(0,0,0,.18),
+
+        inset 0 0 25px rgba(0,0,0,.25);
+
+}
+
+
+.book-cover::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:12px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:4px;
+
+}
+
+
+.book-symbol{
+
+    position:relative;
+
+    width:85px;
+
+    height:85px;
+
+    border-radius:50%;
+
+    background:#0f172a;
+
+    border:3px solid #60a5fa;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#60a5fa;
+
+    font-family:'Press Start 2P', cursive;
+
+    font-size:25px;
+
+    font-weight:bold;
+
+    margin-bottom:22px;
+
+    box-shadow:
+
+        0 0 25px rgba(96,165,250,.15);
+
+}
+
+
+.book-small-title{
+
+    color:#93c5fd;
+
+    font-family:'VT323', monospace;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+}
+
+
+.book-cover h2{
+
+    color:white;
+
+    font-family:'Press Start 2P', cursive;
+
+    font-size:19px;
+
+    line-height:1.7;
+
+    letter-spacing:1px;
+
+    margin:8px 0;
+
+}
+
+
+.book-line{
+
+    width:60px;
+
+    height:2px;
+
+    background:#60a5fa;
+
+    margin:15px 0;
+
+}
+
+
+.book-cover p{
+
+    color:#93c5fd;
+
+    font-family:'VT323', monospace;
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    font-weight:bold;
+
+}
+
+
+/* =========================
+   BOOK PAGES
+========================= */
+
+.book-pages{
+
+    background:#e2e8f0;
+
+    color:#1e293b;
+
+    border-radius:3px 8px 8px 3px;
+
+    padding:45px 35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    box-shadow:
+
+        inset 8px 0 0 rgba(15,23,42,.08);
+
+}
+
+
+.page-label{
+
+    color:#2563eb;
+
+    font-family:'VT323', monospace;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:10px;
+
+}
+
+
+.book-pages h2{
+
+    color:#172554;
+
+    font-family:'Press Start 2P', cursive;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    margin-bottom:14px;
+
+}
+
+
+.book-pages p{
+
+    color:#64748b;
+
+    font-family:'VT323', monospace;
+
+    font-size:20px;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================
+   QUEST PANEL
+========================= */
+
+.quest-panel{
+
+    background:#111827;
+
+    border:1px solid #334155;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+}
+
+
+.quest-title{
+
+    color:#60a5fa;
+
+    font-family:'VT323', monospace;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    margin-bottom:15px;
+
+}
+
+
+.quest-title span{
+
+    color:#facc15;
+
+    margin-right:5px;
+
+}
+
+
+.quest-panel h3{
+
+    color:#f8fafc;
+
+    font-family:'Press Start 2P', cursive;
+
+    font-size:11px;
+
+    line-height:1.7;
+
+    margin-bottom:10px;
+
+}
+
+
+.quest-panel p{
+
+    color:#94a3b8;
+
+    font-family:'VT323', monospace;
+
+    font-size:17px;
+
+    line-height:1.6;
+
+    margin-bottom:20px;
+
+}
+
+
+.quest-progress-bar{
+
+    width:100%;
+
+    height:7px;
+
+    background:#1e293b;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+}
+
+
+.quest-progress-bar div{
+
+    width:0%;
+
+    height:100%;
+
+    background:#2563eb;
+
+}
+
+
+.quest-progress span{
+
+    display:block;
+
+    color:#64748b;
+
+    font-family:'VT323', monospace;
+
+    font-size:15px;
+
+    margin-top:7px;
+
+}
+
+
+/* =========================
+   BOOK MAP
+========================= */
+
+.book-map{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1100px;
+
+    margin:90px auto 0;
+
+}
+
+
+.map-title{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+
+.map-title > span{
+
+    color:#60a5fa;
+
+    font-family:'VT323', monospace;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+}
+
+
+.map-title h2{
+
+    color:#f8fafc;
+
+    font-family:'Press Start 2P', cursive;
+
+    font-size:22px;
+
+    line-height:1.7;
+
+    margin:8px 0;
+
+}
+
+
+.map-title p{
+
+    color:#64748b;
+
+    font-family:'VT323', monospace;
+
+    font-size:18px;
+
+}
+
+
+/* =========================
+   BOOK CONTAINER
+========================= */
+
+.books-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+
+/* =========================
+   STORY BOOK
+========================= */
+
+.story-book{
+
+    position:relative;
+
+    min-height:165px;
+
+    display:grid;
+
+    grid-template-columns:100px 1fr;
+
+    gap:20px;
+
+    text-align:left;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    border:1px solid #263451;
+
+    background:#111827;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    overflow:hidden;
+
+}
+
+
+.story-book:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#3b82f6;
+
+    box-shadow:
+
+        0 15px 30px rgba(0,0,0,.25),
+
+        0 0 20px rgba(37,99,235,.08);
+
+}
+
+
+/* =========================
+   BOOK NUMBER
+========================= */
+
+.book-number{
+
+    position:absolute;
+
+    top:8px;
+
+    right:12px;
+
+    color:#475569;
+
+    font-family:'VT323', monospace;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+}
+
+
+/* =========================
+   SMALL BOOK COVER
+========================= */
+
+.book-cover-small{
+
+    min-height:125px;
+
+    border-radius:5px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #1e3a8a,
+            #172554
+        );
+
+    border:2px solid #334155;
+
+    padding:14px 10px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+.book-cover-small span{
+
+    color:#93c5fd;
+
+    font-family:'VT323', monospace;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    margin-bottom:12px;
+
+}
+
+
+.book-cover-small strong{
+
+    color:white;
+
+    font-family:'VT323', monospace;
+
+    font-size:18px;
+
+    line-height:1.4;
+
+}
+
+
+/* =========================
+   BOOK INFO
+========================= */
+
+.book-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding-right:15px;
+
+}
+
+
+.book-info h3{
+
+    color:#f1f5f9;
+
+    font-family:'Press Start 2P', cursive;
+
+    font-size:12px;
+
+    line-height:1.6;
+
+    margin-bottom:8px;
+
+}
+
+
+.book-info p{
+
+    color:#64748b;
+
+    font-family:'VT323', monospace;
+
+    font-size:17px;
+
+    line-height:1.6;
+
+    margin-bottom:12px;
+
+}
+
+
+.play-label{
+
+    color:#60a5fa;
+
+    font-family:'VT323', monospace;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    letter-spacing:.7px;
+
+}
+
+
+.lock-label{
+
+    color:#475569;
+
+    font-family:'VT323', monospace;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+}
+
+
+/* =========================
+   LOCKED BOOK
+========================= */
+
+.locked-book{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+}
+
+
+.locked-book:hover{
+
+    transform:none;
+
+    border-color:#263451;
+
+    box-shadow:none;
+
+}
+
+
+.locked-book .book-cover-small{
+
+    background:#1e293b;
+
+    border-color:#334155;
+
+}
+
+
+.locked-book .book-cover-small strong{
+
+    color:#64748b;
+
+}
+
+
+/* =========================
+   GAME TIP
+========================= */
+
+.game-tip{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:750px;
+
+    margin:60px auto 0;
+
+    padding:18px 22px;
+
+    background:#111827;
+
+    border:1px solid #263451;
+
+    border-radius:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+.tip-icon{
+
+    width:42px;
+
+    height:42px;
+
+    flex-shrink:0;
+
+    border-radius:9px;
+
+    background:#1e293b;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:20px;
+
+}
+
+
+.game-tip strong{
+
+    color:#f1f5f9;
+
+    font-family:'Press Start 2P', cursive;
+
+    font-size:9px;
+
+    line-height:1.6;
+
+    letter-spacing:1px;
+
+}
+
+
+.game-tip p{
+
+    color:#64748b;
+
+    font-family:'VT323', monospace;
+
+    font-size:17px;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    padding:25px 20px;
+
+    background:#070b16;
+
+    border-top:1px solid #1e293b;
+
+    text-align:center;
+
+}
+
+
+footer p{
+
+    color:#475569;
+
+    font-family:'VT323', monospace;
+
+    font-size:15px;
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:950px){
+
+    .adventure-area{
+
+        grid-template-columns:1fr;
+
+        max-width:700px;
+
+        gap:25px;
+
+    }
+
+
+    .character-area{
+
+        order:1;
+
+    }
+
+
+    .main-book{
+
+        order:2;
+
+    }
+
+
+    .quest-panel{
+
+        order:3;
+
+        max-width:500px;
+
+        width:100%;
+
+        margin:auto;
+
+    }
+
+
+    .books-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:650px){
+
+    .game-header{
+
+        padding:10px 15px;
+
+        gap:10px;
+
+    }
+
+
+    .game-logo img{
+
+        width:35px;
+
+        height:35px;
+
+    }
+
+
+    .game-logo h2{
+
+        font-size:11px;
+
+    }
+
+
+    .game-logo span{
+
+        font-size:12px;
+
+    }
+
+
+    .player-info{
+
+        gap:8px;
+
+    }
+
+
+    .xp-info{
+
+        display:none;
+
+    }
+
+
+    .back-button{
+
+        font-size:15px;
+
+        padding:6px 10px;
+
+    }
+
+
+    .game-world{
+
+        padding:50px 18px 70px;
+
+    }
+
+
+    .game-intro h1{
+
+        font-size:22px;
+
+        line-height:1.7;
+
+    }
+
+
+    .game-intro p{
+
+        font-size:18px;
+
+    }
+
+
+    .chapter-label{
+
+        font-size:15px;
+
+    }
+
+
+    .character-placeholder{
+
+        width:105px;
+
+        height:130px;
+
+    }
+
+
+    .main-book{
+
+        min-height:500px;
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .book-cover{
+
+        min-height:250px;
+
+        border-radius:8px 8px 3px 3px;
+
+    }
+
+
+    .book-pages{
+
+        min-height:220px;
+
+        border-radius:3px 3px 8px 8px;
+
+    }
+
+
+    .book-cover h2{
+
+        font-size:15px;
+
+    }
+
+
+    .book-pages h2{
+
+        font-size:14px;
+
+    }
+
+
+    .book-pages p{
+
+        font-size:18px;
+
+    }
+
+
+    .books-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .story-book{
+
+        grid-template-columns:80px 1fr;
+
+    }
+
+
+    .book-cover-small{
+
+        min-height:115px;
+
+    }
+
+
+    .book-info h3{
+
+        font-size:10px;
+
+    }
+
+
+    .book-info p{
+
+        font-size:16px;
+
+    }
+
+
+    .map-title h2{
+
+        font-size:17px;
+
+    }
+
+
+    .game-tip{
+
+        align-items:flex-start;
+
+    }
+
+}

@@ -1,67 +1,3 @@
-//about
-
-var backToTop = document.getElementById("backToTop");
-
-
-window.addEventListener("scroll", function(){
-
-    if(window.scrollY > 300){
-
-        backToTop.style.display = "block";
-
-    }
-
-    else{
-
-        backToTop.style.display = "none";
-
-    }
-
-});
-
-
-backToTop.addEventListener("click", function(){
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-});
-
-//curriculum
-
-var backToTop = document.getElementById("backToTop");
-
-
-window.addEventListener("scroll", function(){
-
-    if(window.scrollY > 300){
-
-        backToTop.style.display = "block";
-
-    }
-
-    else{
-
-        backToTop.style.display = "none";
-
-    }
-
-});
-
-
-backToTop.addEventListener("click", function(){
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-});
-
-//index
-
 function showInfo(feature){
 
     var title = document.getElementById("infoTitle");
@@ -364,4 +300,8 @@ function closeResearchers(){
         "none";
 
 }
+
+
+
+
 
